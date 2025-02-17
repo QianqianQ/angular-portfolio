@@ -1,0 +1,22 @@
+<header class="header">
+    <div class="logo">
+      <h1>Portfolio</h1>
+    </div>
+    <nav class="nav">
+      <ul>
+        @for (item of navItems; track item) {
+          <li>
+            <a [routerLink]="item.route" routerLinkActive="active">{{ item.label }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+    <nav class="social-links">
+      @for (contact of contactInfo; track contact.type)  {
+        <a [href]="contact.link" [attr.target]="contact.type !== 'email' ? '_blank' : null">
+          <i [class]="contact.icon"></i>
+        </a>
+      }
+    </nav>
+    <app-theme-toggle></app-theme-toggle>
+</header>
