@@ -1,0 +1,35 @@
+.about-me {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .animated-name {
+    font-size: 7rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, 
+    #6a11cb, 
+    #2575fc, 
+    #00b4db, 
+    #6a11cb);
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: subtle-shine 8s linear infinite, fly-in 1s ease-out forwards;
+
+    opacity: 1;
+    transform: translateX(-100%);
+    
+    @keyframes subtle-shine {
+      to {
+        background-position: 400% center;
+      }
+    }
+
+    @keyframes fly-in {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+    }
+  }
