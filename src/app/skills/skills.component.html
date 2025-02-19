@@ -1,0 +1,13 @@
+<section class="skills-section" [@fadeInStagger]>
+    <h2 class="display-4 d-flex fw-bold">
+        Skills
+    </h2>
+    <div class="skills-grid row g-4">
+        @for (skill of skills; track skill.name) {
+        <div class="skill-item col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center text-center">
+            <i class="devicon-large devicon-{{ skill.icon }} mb-2"></i>
+            <span class="skill-name">{{ skill.name }}</span>
+        </div>
+        }
+    </div>
+</section>
