@@ -1,0 +1,21 @@
+<section class="education-section">
+    <h2 class="section-title display-4 d-flex fw-bold">Education</h2>
+    @for (item of education; track $index) {
+        <div class="education-item">
+            <div class="timeline">
+                <div class="timeline-circle"></div>
+                <div class="timeline-line"></div>
+            </div>
+            <div class="content">
+                <h3 class="degree">{{ item.degree }}</h3>
+                <p class="institution">{{ item.institution }}</p>
+                <p class="date">{{ item.startDate }} - {{ item.endDate }}</p>
+                <ul>
+                    @for (detail of item.details; track $index) {
+                        <li>{{ detail }}</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</section>
