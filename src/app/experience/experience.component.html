@@ -1,0 +1,18 @@
+
+<section class="experience-section">
+<h2 class="display-4 d-flex fw-bold">
+    Experience
+</h2>
+<div class="timeline"  [@fadeInUp]>
+    @for (experience of experiences; track experience.date) {
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>{{ experience.title }}</h3>
+                <h4>{{ experience.company }}</h4>
+                <p class="date">{{ experience.date }}</p>
+                <p>{{ experience.description }}</p>
+            </div>
+        </div>
+    }
+</div>
+</section>

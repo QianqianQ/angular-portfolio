@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
-import { skills } from '../data/skills';
-
+import { experiences } from '../data/experiences';
 @Component({
-  selector: 'app-skills',
+  selector: 'app-experience',
   imports: [],
-  templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss',
+  templateUrl: './experience.component.html',
+  styleUrl: './experience.component.scss',
   animations: [
-    trigger('fadeInStagger', [
+    trigger('fadeInUp', [
       transition(':enter', [
-        query('.skill-item', [
+        query('.timeline-item', [
           style({ opacity: 0, transform: 'translateY(20px)' }),
           stagger(100, [
             animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
@@ -21,6 +20,7 @@ import { skills } from '../data/skills';
     ])
   ]
 })
-export class SkillsComponent {
-  skills = skills;
+
+export class ExperienceComponent {
+  experiences = experiences;
 }
