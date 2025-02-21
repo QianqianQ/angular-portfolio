@@ -1,0 +1,17 @@
+<section class="certificates-section">
+    <h2 class="section-title display-4 d-flex fw-bold">
+        Certificates
+    </h2>
+    <div class="certificates-grid">
+        @for (certificate of certificates; track certificate.title) {
+            <div class="card certificate-card">
+                <a [href]="certificate.certificateImg" target="_blank">
+                    <img class="card-img-top certificate-img" [src]="certificate.certificateImg" [alt]="certificate.title">
+                </a>
+                <div class="card-body">
+                  <p class="card-text">{{certificate.title}}</p>
+                </div>
+              </div>
+        }
+    </div>
+</section>

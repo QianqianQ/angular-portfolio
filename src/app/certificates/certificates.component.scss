@@ -1,0 +1,86 @@
+.certificates-section {
+    padding: 1rem;
+    width: 80%;
+    margin: 0 auto;
+
+    .section-title {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      display: inline-block;
+    
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, #6a11cb, #2575fc);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+    
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  
+  }
+  
+  .certificates-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+
+    &:has(> :nth-last-child(n+5)) {
+        // If there are 5 or more items, limit to 4 columns
+        grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .certificate-card {
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background-color: var(--container-color);
+    height: 100%;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    text-align: center;  // Center text in the card
+
+    &:hover {
+        border-color: var(--first-color);
+        transform: scale(1.03);
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    a {
+        display: block;  // Make the anchor a block element
+        width: 100%;  // Full width of the card
+        height: 80%;  // Set height to 80% of the card height
+        margin: 0 auto;
+
+        .certificate-img {
+            width: 100%;  // Full width of the anchor
+            height: 100%;  // Full height of the anchor
+            object-fit: cover;  // Maintain aspect ratio and cover the area
+        }
+    }
+
+    .card-body {
+        color: var(--text-color);  // Use CSS variable for text color
+        
+        .card-text {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+    }
+}
