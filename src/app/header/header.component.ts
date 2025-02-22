@@ -15,6 +15,9 @@ export class HeaderComponent {
 
   navItems = [
     { label: 'Home', route: '/home' },
+    { label: 'Skills', route: '/skills' },
+    { label: 'Experience', route: '/experience' },
+    { label: 'Certificates', route: '/certificates' },
     { label: 'Contact', route: '/contact' }
   ];
 

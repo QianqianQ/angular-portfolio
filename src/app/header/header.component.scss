@@ -4,16 +4,9 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 2rem;
+  font-size: 1.5rem;
   background-color: var(--background-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  .logo {
-    h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      color: var(--text-color);
-    }
-  }
 
   .nav {
     ul {
@@ -48,16 +41,13 @@
     align-items: center;
     margin-left: auto;
     margin-right: 1rem;
-  }
 
-  .social-icon {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    transition: transform 0.2s ease, color 0.2s ease;
-    
-    &:hover {
-      transform: translateY(-2px);
-      color: var(--primary-color);
+    a {
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+      }
     }
   }
 }
