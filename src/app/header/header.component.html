@@ -1,19 +1,23 @@
-<header class="header">
-    <nav class="nav">
-      <ul>
-        @for (item of navItems; track item) {
-          <li>
-            <a [routerLink]="item.route" routerLinkActive="active">{{ item.label }}</a>
-          </li>
-        }
-      </ul>
-    </nav>
-    <nav class="social-links">
-      @for (contact of contactInfo; track contact.type)  {
-        <a [href]="contact.link" [attr.target]="contact.type !== 'email' ? '_blank' : null">
-          <i [class]="contact.icon"></i>
-        </a>
-      }
-    </nav>
-    <app-theme-toggle></app-theme-toggle>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" [routerLink]="['/']">Logo</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto" [@fadeIn]>
+          @for (item of navItems; track item.label) {
+            <li class="nav-item">
+              <a class="nav-link" 
+                (click)="scrollToSection(item.fragment)"
+                [class.active]="activeSection === item.fragment">
+                {{ item.label }}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>

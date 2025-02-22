@@ -1,4 +1,4 @@
-<section class="contact-section">
+<section class="contact-section" id="contact">
   <h1>Contact</h1>
   <div class="contact-grid">
     @for (contact of contactInfo; track contact.type) {
@@ -9,16 +9,4 @@
       </a>
     }
   </div>
-  <!-- <div class="contact-section">
-    <h1>Social Media</h1>
-    <div class="contact-grid">
-        @for (social of socialMedia; track social.type) {
-            <a class="contact-card" [href]="social.link" [attr.target]="social.type !== 'email' ? '_blank' : null">
-              <i [class]="social.icon"></i>
-              <h2>{{social.label}}</h2>
-              {{social.value}}
-            </a>
-        }
-    </div>
-  </div> -->
 </section>

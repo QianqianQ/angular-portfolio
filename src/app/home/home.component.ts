@@ -5,10 +5,16 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { EducationComponent } from '../education/education.component';
 import { CertificatesComponent } from '../certificates/certificates.component';
-
+import { ContactComponent } from '../contact/contact.component';
 @Component({
   selector: 'app-home',
-  imports: [AboutComponent, SkillsComponent, ExperienceComponent, EducationComponent, CertificatesComponent],
+  imports: [
+    AboutComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    EducationComponent,
+    CertificatesComponent,
+    ContactComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

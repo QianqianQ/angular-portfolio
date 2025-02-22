@@ -18,6 +18,7 @@ html, body {
     'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 // Links
@@ -67,4 +68,8 @@ button {
   &:hover {
     filter: brightness(150%);
   }
+}
+
+section {
+  scroll-margin-top: var(--header-height);
 }

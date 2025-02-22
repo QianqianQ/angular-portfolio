@@ -1,25 +1,49 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
+import { RouterModule, Router } from '@angular/router';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 import { contactInfo } from '../data/contact-info';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, ThemeToggleComponent],
+  imports: [RouterModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [
+    trigger('fadeIn', [
+      state('void', style({ opacity: 0 })),
+      state('*', style({ opacity: 1 })),
+      transition('void <=> *', animate('300ms ease-in-out'))
+    ])
+  ]
 })
 export class HeaderComponent {
 
   navItems = [
-    { label: 'Home', route: '/home' },
-    { label: 'Skills', route: '/skills' },
-    { label: 'Experience', route: '/experience' },
-    { label: 'Certificates', route: '/certificates' },
-    { label: 'Contact', route: '/contact' }
+    { label: 'About', route: '/', fragment: 'about' },
+    { label: 'Skills', route: '/', fragment: 'skills' },
+    { label: 'Experience', route: '/', fragment: 'experience' },
+    { label: 'Education', route: '/', fragment: 'education' },
+    { label: 'Certificates', route: '/', fragment: 'certificates' },
+    { label: 'Contact', route: '/', fragment: 'contact' }
   ];
 
   contactInfo = contactInfo;
+
+  activeSection: string | null = null;
+
+  constructor(private router: Router) {}
+
+  scrollToSection(fragment: string) {
+    // Navigate to the fragment
+    this.router.navigate(['/'], { fragment: fragment }).then(() => {
+      // Wait for navigation to complete, then scroll to the section
+      this.activeSection = fragment;
+      const element = document.getElementById(fragment);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 }
