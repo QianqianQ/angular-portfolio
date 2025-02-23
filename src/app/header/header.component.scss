@@ -36,4 +36,48 @@
       color: var(--primary-color);
     }
   }
+
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 2rem;
+    font-size: medium;
+    
+    a {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        color: var(--primary-color);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      .social-links {
+        margin: 1rem 0;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// Make sure the nav links and social icons align properly
+.navbar-nav {
+  align-items: center;
+}
+
+// Ensure proper spacing in mobile view
+@media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
+    padding: 1rem 0;
+
+    .navbar-nav {
+      margin-bottom: 0.5rem;
+    }
+  }
 }

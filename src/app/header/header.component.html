@@ -17,6 +17,13 @@
             </li>
           }
         </ul>
+        <div class="social-links">
+          @for (contact of contactInfo; track contact.type) {
+            <a [attr.href]="contact.link || null" [attr.target]="contact.type !== 'email' ? '_blank' : null"  rel="noopener noreferrer">
+              <i [class]="contact.icon"></i>
+            </a>
+          }
+        </div>
       </div>
     </div>
   </nav>
