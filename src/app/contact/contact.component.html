@@ -1,11 +1,12 @@
 <section class="contact-section" id="contact">
-  <h1>Contact</h1>
+  <h2 class="display-4 d-flex fw-bold section-title">
+    Contact
+  </h2>
   <div class="contact-grid">
     @for (contact of contactInfo; track contact.type) {
       <a class="contact-card primary-card" [attr.href]="contact.link || null" [attr.target]="contact.type !== 'email' ? '_blank' : null">
         <i [class]="contact.icon"></i>
         <h2>{{contact.label}}</h2>
-        <span>{{contact.value}}</span>
       </a>
     }
   </div>
