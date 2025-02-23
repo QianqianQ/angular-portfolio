@@ -5,11 +5,15 @@
     <div class="certificates-grid">
         @for (certificate of certificates; track certificate.title) {
             <div class="card certificate-card">
-                <a [href]="certificate.certificateImg" target="_blank">
+                <a [href]="certificate.certificateLink" target="_blank">
                     <img class="card-img-top certificate-img" [src]="certificate.certificateImg" [alt]="certificate.title">
                 </a>
                 <div class="card-body">
-                  <p class="card-text">{{certificate.title}}</p>
+                  <p class="card-text">{{certificate.title}}
+                    <a [href]="certificate.certificateLink" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </p>
                 </div>
               </div>
         }

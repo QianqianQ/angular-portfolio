@@ -4,8 +4,8 @@ import { CERTIFICATES } from '../data/certificates';
 
 interface Certificate {
   title: string;
-  certificateUrl?: string;
   certificateImg: string;
+  certificateLink?: string;
 }
 
 @Component({
