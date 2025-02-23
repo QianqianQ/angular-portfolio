@@ -1,6 +1,5 @@
 .timeline {
   position: relative;
-  max-width: 800px;
   margin: 0 auto;
   padding: 20px 0;
 
@@ -40,22 +39,62 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    h3 {
-      color: #6a11cb;
+    .title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        h3 {
+            color: #6a11cb;
+            margin: 0;  // Remove default margin
+        }
+
+        .date {
+            color: #777;
+            font-size: 0.9rem;
+        }
     }
+
     h4 {
-      color: #333;
+        color: #333;
     }
-    .date {
-      color: #777;
-    }
+
     p {
-      color: #555;
+        color: #555;
     }
-  
+
+    .tech-stack {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        
+        .tech-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(106, 17, 203, 0.1);
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            color: #6a11cb;
+            transition: all 0.3s ease;
+
+            i {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                background-color: rgba(106, 17, 203, 0.2);
+                transform: translateY(-2px);
+            }
+        }
+    }
+
     &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
   }  
 }

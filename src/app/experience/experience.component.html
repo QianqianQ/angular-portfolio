@@ -1,18 +1,26 @@
-
 <section class="experience-section" id="experience">
-<h2 class="display-4 d-flex fw-bold">
-    Experience
-</h2>
-<div class="timeline"  [@fadeInUp]>
-    @for (experience of experiences; track experience.date) {
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h3>{{ experience.title }}</h3>
-                <h4>{{ experience.company }}</h4>
-                <p class="date">{{ experience.date }}</p>
-                <p>{{ experience.description }}</p>
+    <h2 class="display-4 d-flex fw-bold">
+        Experience
+    </h2>
+    <div class="timeline" [@fadeInUp]>
+        @for (experience of experiences; track experience.date) {
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="title-row">
+                        <h3>{{ experience.title }}</h3>
+                        <span class="date">{{ experience.date }}</span>
+                    </div>
+                    <h4>{{ experience.company }}</h4>
+                    <p>{{ experience.description }}</p>
+                    <div class="tech-stack">
+                        @for (tech of experience.techStack; track tech) {
+                            <div class="tech-item">
+                                <span class="tech-name">{{tech}}</span>
+                            </div>
+                        }
+                    </div>
+                </div>
             </div>
-        </div>
-    }
-</div>
+        }
+    </div>
 </section>

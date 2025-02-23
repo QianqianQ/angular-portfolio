@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
-import { experiences } from '../data/experiences';
+import { EXPERIENCE } from '../data/experience';
 @Component({
   selector: 'app-experience',
   imports: [],
@@ -22,5 +22,5 @@ import { experiences } from '../data/experiences';
 })
 
 export class ExperienceComponent {
-  experiences = experiences;
+  experiences = EXPERIENCE;
 }
