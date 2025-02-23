@@ -3,6 +3,13 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
 
 import { EDUCATION } from '../data/education';
 
+export interface Education {
+  degree: string;
+  institution: string;
+  startDate: string;
+  endDate: string;
+  details?: string[];
+}
 
 @Component({
   selector: 'app-education',
@@ -23,5 +30,5 @@ import { EDUCATION } from '../data/education';
   ]
 })
 export class EducationComponent {
-  education = EDUCATION;
+  education: Education[] = EDUCATION;
 }

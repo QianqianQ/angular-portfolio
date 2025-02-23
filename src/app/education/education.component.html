@@ -1,21 +1,23 @@
 <section class="education-section" id="education">
-    <h2 class="section-title display-4 d-flex fw-bold">Education</h2>
+    <h2 class="section-title display-4 d-flex fw-bold">
+        Education
+    </h2>
+    <div class="timeline" [@fadeInUp]>
     @for (item of education; track $index) {
-        <div class="education-item">
-            <div class="timeline">
-                <div class="timeline-circle"></div>
-                <div class="timeline-line"></div>
-            </div>
-            <div class="content">
-                <h3 class="degree">{{ item.degree }}</h3>
-                <p class="institution">{{ item.institution }}</p>
-                <p class="date">{{ item.startDate }} - {{ item.endDate }}</p>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <div class="title-row">
+                    <h3 class="degree">{{ item.degree }}</h3>
+                    <span class="date">{{ item.startDate }} - {{ item.endDate }}</span>
+                </div>
+                <h4 class="institution">{{ item.institution }}</h4>
                 <ul>
-                    @for (detail of item.details; track $index) {
+                    @for (detail of item?.details; track $index) {
                         <li>{{ detail }}</li>
                     }
                 </ul>
             </div>
         </div>
-    }
+    }   
+    </div>
 </section>
