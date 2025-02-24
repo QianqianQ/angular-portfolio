@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-
-import { fullName } from '../data/about';
-
+import { FULL_NAME, ABOUT_ME } from '../data/about';
+import { contactInfo } from '../data/contact-info';
 @Component({
   selector: 'app-about',
   imports: [],
@@ -9,5 +8,7 @@ import { fullName } from '../data/about';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  fullName = fullName;
+  fullName = FULL_NAME;
+  aboutMeText = ABOUT_ME;
+  contactInfo = contactInfo;
 }

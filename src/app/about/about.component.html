@@ -1,5 +1,24 @@
-<section class="page-section" id="about">
-    <div class="about-me">
-        <h1 class="animated-name">{{ fullName }}</h1>
+<section class="page-section about-section" id="about">
+    <div class="about-container">
+        <div class="name-section">
+            <h2 class="animated-name d-flex display-4 fw-bold">
+                {{ fullName }}
+            </h2>
+            <div class="social-links">
+                @for (contact of contactInfo; track contact.type) {
+                    <a [attr.href]="contact.link || null" 
+                       [attr.target]="contact.type !== 'email' ? '_blank' : null"
+                       rel="noopener noreferrer"
+                       class="social-link">
+                        <i [class]="contact.icon + ' fa-2x'"></i>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>{{ aboutMeText }}</p>
+            </div>
+        </div>
     </div>
 </section>

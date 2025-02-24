@@ -26,9 +26,8 @@ export class HeaderComponent {
     { label: 'Experience', route: '/', fragment: 'experience' },
     { label: 'Education', route: '/', fragment: 'education' },
     { label: 'Certificates', route: '/', fragment: 'certificates' },
-    { label: 'Contact', route: '/', fragment: 'contact' }
   ];
-
+  
   contactInfo = contactInfo;
 
   activeSection: string | null = null;

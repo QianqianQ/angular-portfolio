@@ -5,7 +5,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { EducationComponent } from '../education/education.component';
 import { CertificatesComponent } from '../certificates/certificates.component';
-import { ContactComponent } from '../contact/contact.component';
+
 @Component({
   selector: 'app-home',
   imports: [
@@ -13,8 +13,8 @@ import { ContactComponent } from '../contact/contact.component';
     SkillsComponent,
     ExperienceComponent,
     EducationComponent,
-    CertificatesComponent,
-    ContactComponent],
+    CertificatesComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
