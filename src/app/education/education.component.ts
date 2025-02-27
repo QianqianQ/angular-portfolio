@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
 import { Education } from '../models';
-import { EDUCATION } from '../data/education';
+import * as data from '../data/data.json';
+// import { EDUCATION } from '../data/education';
 
 @Component({
   selector: 'app-education',
@@ -23,5 +24,5 @@ import { EDUCATION } from '../data/education';
   ]
 })
 export class EducationComponent {
-  education: Education[] = EDUCATION;
+  education: Education[] = data.education;
 }

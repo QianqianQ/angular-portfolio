@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 import { ContactInfo } from '../models';
-import { CONTACT_INFO } from '../data/contactInfo';
+import * as data from '../data/data.json';
+// import { CONTACT_INFO } from '../data/contactInfo';
 
 @Component({
   selector: 'app-contact',
@@ -10,5 +11,5 @@ import { CONTACT_INFO } from '../data/contactInfo';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  contactInfo: ContactInfo[] = CONTACT_INFO;
+  contactInfo: ContactInfo[] = data.contactInfo;
 }

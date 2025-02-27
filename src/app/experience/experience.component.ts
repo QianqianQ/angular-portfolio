@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
 import { Experience } from '../models';
-import { EXPERIENCE } from '../data/experience';
+import * as data from '../data/data.json';
+// import { EXPERIENCE } from '../data/experience';
+
 @Component({
   selector: 'app-experience',
   imports: [],
@@ -23,5 +25,5 @@ import { EXPERIENCE } from '../data/experience';
 })
 
 export class ExperienceComponent {
-  experiences: Experience[] = EXPERIENCE;
+  experiences: Experience[] = data.experience;
 }

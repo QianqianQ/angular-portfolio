@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 import { Certificate } from '../models';
-import { CERTIFICATES } from '../data/certificates';
+import * as data from '../data/data.json';
+// import { CERTIFICATES } from '../data/certificates';
 
 @Component({
   selector: 'app-certificates',
@@ -10,5 +11,5 @@ import { CERTIFICATES } from '../data/certificates';
   styleUrl: './certificates.component.scss'
 })
 export class CertificatesComponent {
-  certificates: Certificate[] = CERTIFICATES;
+  certificates: Certificate[] = data.certificates;
 }

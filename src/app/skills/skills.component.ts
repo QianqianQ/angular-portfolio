@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
-import { SKILLS } from '../data/skills';
+import { Skill } from '../models';
+import * as data from '../data/data.json';
+// import { SKILLS } from '../data/skills';
 
 @Component({
   selector: 'app-skills',
@@ -22,5 +24,5 @@ import { SKILLS } from '../data/skills';
   ]
 })
 export class SkillsComponent {
-  skills = SKILLS;
+  skills: Skill[] = data.skills;
 }
