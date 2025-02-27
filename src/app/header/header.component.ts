@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
-import { contactInfo } from '../data/contact-info';
+import { CONTACT_INFO } from '../data/contactInfo';
+import { ContactInfo } from '../models';
 
 @Component({
   selector: 'app-header',
@@ -28,7 +30,7 @@ export class HeaderComponent {
     { label: 'Certificates', route: '/', fragment: 'certificates' },
   ];
   
-  contactInfo = contactInfo;
+  sociaMediaInfo: ContactInfo[] = CONTACT_INFO;
 
   activeSection: string | null = null;
 

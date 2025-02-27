@@ -18,9 +18,9 @@
           }
         </ul>
         <div class="social-links">
-          @for (contact of contactInfo; track contact.type) {
-            <a [attr.href]="contact.link || null" [attr.target]="contact.type !== 'email' ? '_blank' : null"  rel="noopener noreferrer">
-              <i [class]="contact.icon"></i>
+          @for (item of sociaMediaInfo; track item.type) {
+            <a [attr.href]="item.link || null" [attr.target]="item.type !== 'email' ? '_blank' : null"  rel="noopener noreferrer">
+              <i [class]="item.icon"></i>
             </a>
           }
         </div>

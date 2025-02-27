@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
-import { skills } from '../data/skills';
+import { SKILLS } from '../data/skills';
 
 @Component({
   selector: 'app-skills',
@@ -22,5 +22,5 @@ import { skills } from '../data/skills';
   ]
 })
 export class SkillsComponent {
-  skills = skills;
+  skills = SKILLS;
 }

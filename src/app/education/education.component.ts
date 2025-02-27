@@ -1,15 +1,8 @@
 import { Component } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
+import { Education } from '../models';
 import { EDUCATION } from '../data/education';
-
-export interface Education {
-  degree: string;
-  institution: string;
-  startDate: string;
-  endDate: string;
-  details?: string[];
-}
 
 @Component({
   selector: 'app-education',

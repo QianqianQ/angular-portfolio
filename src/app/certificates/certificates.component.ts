@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Certificate } from '../models';
 import { CERTIFICATES } from '../data/certificates';
-
-interface Certificate {
-  title: string;
-  certificateImg: string;
-  certificateLink?: string;
-}
 
 @Component({
   selector: 'app-certificates',
