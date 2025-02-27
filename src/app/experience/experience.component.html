@@ -1,26 +1,37 @@
-<section class="page-section" id="experience">
-    <h2 class="section-title d-flex display-4 fw-bold">
-        Experience
-    </h2>
-    <div class="timeline" [@fadeInUp]>
-        @for (experience of experiences; track experience.date) {
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="title-row">
-                        <h3>{{ experience.title }}</h3>
-                        <span class="date">{{ experience.date }}</span>
-                    </div>
-                    <h4>{{ experience.company }}</h4>
-                    <p>{{ experience.description }}</p>
-                    <div class="tech-stack">
-                        @for (tech of experience.techStack; track tech) {
-                            <div class="tech-item">
-                                <span class="tech-name">{{tech}}</span>
-                            </div>
-                        }
-                    </div>
-                </div>
+
+<!-- <section class="experience-section" id="experience"> -->
+
+<!-- <div class="timeline"  [@fadeInUp]>
+    @for (experience of experiences; track experience.date) {
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>{{ experience.title }}</h3>
+                <h4>{{ experience.company }}</h4>
+                <p class="date">{{ experience.date }}</p>
+                <p>{{ experience.description }}</p>
             </div>
+        </div>
+    }
+</div> -->
+
+<section class="experience-section" id="experience">
+    <h2 class="display-4 d-flex fw-bold">Experience</h2>
+    <div class="timeline">
+        @for (experience of experiences; track experience.title) {
+          <div class="timeline-point" 
+               [class.active]="activeExperience === experience"
+               (click)="setActiveExperience(experience)">
+            <div class="timeline-date">{{ experience.date }}</div>
+            <div class="timeline-dot"></div>
+          </div>
         }
-    </div>
+      </div>
+      @if (activeExperience) {
+      <div class="experience-details">
+        <h3>{{ activeExperience.title }}</h3>
+        <p class="company">{{ activeExperience.company }}</p>
+        <p class="date">{{ activeExperience.date }}</p>
+        <p class="description">{{ activeExperience.description }}</p>
+      </div>
+    }
 </section>

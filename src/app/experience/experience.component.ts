@@ -23,4 +23,18 @@ import { EXPERIENCE } from '../data/experience';
 
 export class ExperienceComponent {
   experiences = EXPERIENCE;
+
+  activeExperience: any = null;
+
+  constructor() {
+    this.activeExperience = this.experiences[0];
+  }
+
+  setActiveExperience(experience: any) {
+    this.activeExperience = experience;
+  }
+
+  getActiveExperience() {
+    return this.activeExperience;
+  }
 }
