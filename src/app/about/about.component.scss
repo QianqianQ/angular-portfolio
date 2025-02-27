@@ -30,15 +30,15 @@
     font-size: 5rem;
     font-weight: bold;
     background: linear-gradient(90deg, 
-        #6a11cb, 
-        #2575fc, 
-        #00b4db, 
-        #6a11cb);
+        #2196f3,
+        #9830ee,
+        #9830ee,
+        #2196f3);
     background-size: 400% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: subtle-shine 8s linear infinite, fadeIn 1s ease-out;
+    animation: subtle-shine 8s ease-in-out infinite, fadeIn 1s ease-out;
     white-space: nowrap;
 }
 

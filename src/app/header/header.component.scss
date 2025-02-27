@@ -1,16 +1,22 @@
 .navbar {
-  background-color: var(--container-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 1rem;
+  background-color: var(--header-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+
+  --header-bg-color: rgba(255, 255, 255, 0.98);
+  --header-text-color: #333;
 
   .navbar-brand {
-    color: var(--title-color);
     font-weight: var(--font-medium);
     transition: color 0.3s ease;
-
-    &:hover {
-      color: var(--first-color);
-    }
+    color: var(--header-text-color);
   }
 
   .navbar-toggler {
@@ -28,13 +34,7 @@
     transition: color 0.3s ease;
     position: relative;
     cursor: pointer;
-    &:hover {
-      color: var(--primary-color);
-    }
-
-    &.active {
-      color: var(--primary-color);
-    }
+    color: var(--header-text-color);
   }
 
   .social-links {
@@ -44,12 +44,10 @@
     font-size: medium;
     
     a {
-      color: var(--text-color);
       font-size: 1.2rem;
       transition: all 0.3s ease;
       
       &:hover {
-        color: var(--primary-color);
         transform: translateY(-2px);
       }
     }
@@ -63,6 +61,12 @@
       }
     }
   }
+}
+
+// Dark theme styles
+.dark-theme .navbar {
+  --header-bg-color: rgba(18, 18, 18, 0.98);
+  --header-text-color: #fff;
 }
 
 // Make sure the nav links and social icons align properly
