@@ -5,9 +5,9 @@
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 0.5rem;
 
-  &:has(> :nth-last-child(n+6)) {
+  &:has(> :nth-last-child(n+10)) {
     // If there are 6 or more items, limit to 5 columns
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(9, 1fr);
   }
 
   .skill-item {

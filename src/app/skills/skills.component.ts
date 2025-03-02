@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
 import { Skill } from '../models';
-import * as data from '../data/data.json';
+import * as data from '../../../public/data/data.json';
 // import { SKILLS } from '../data/skills';
 
 @Component({

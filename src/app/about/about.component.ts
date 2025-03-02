@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { ContactInfo } from '../models';
-import * as data from '../data/data.json';
+import * as data from '../../../public/data/data.json';
 // import { FULL_NAME, ABOUT_ME } from '../data/about';
 // import { CONTACT_INFO } from '../data/contactInfo';
 @Component({

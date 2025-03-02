@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Certificate } from '../models';
-import * as data from '../data/data.json';
+import * as data from '../../../public/data/data.json';
 // import { CERTIFICATES } from '../data/certificates';
 
 @Component({

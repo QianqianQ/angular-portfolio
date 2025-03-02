@@ -64,6 +64,24 @@
         color: #555;
     }
 
+    .description-list {
+        list-style: none;
+        padding-left: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .description-item {
+        margin-bottom: 0.75rem;
+        line-height: 1;
+    }
+    
+    .bullet {
+        color: #6a11cb;
+        font-size: 1.2rem;
+        margin-right: 0.75rem;
+        line-height: 1;
+    }
+
     .tech-stack {
         display: inline-flex;
         flex-wrap: wrap;

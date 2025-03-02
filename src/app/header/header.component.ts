@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
-import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
-import { CONTACT_INFO } from '../data/contactInfo';
+// import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
+import * as data from '../../../public/data/data.json';
+// import { CONTACT_INFO } from '../../../public/data/contactInfo';
 import { ContactInfo } from '../models';
 
 @Component({
@@ -30,7 +31,7 @@ export class HeaderComponent {
     { label: 'Certificates', route: '/', fragment: 'certificates' },
   ];
   
-  sociaMediaInfo: ContactInfo[] = CONTACT_INFO;
+  sociaMediaInfo: ContactInfo[] = data.contactInfo;
 
   activeSection: string | null = null;
 

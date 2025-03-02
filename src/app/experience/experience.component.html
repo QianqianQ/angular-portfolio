@@ -11,7 +11,14 @@
                         <span class="date">{{ experience.date }}</span>
                     </div>
                     <h4>{{ experience.company }}</h4>
-                    <p>{{ experience.description }}</p>
+                    <ul class="description-list">
+                        @for (desc of experience.description; track desc) {
+                            <li class="description-item">
+                                <span class="bullet">•</span>
+                                <span class="desc-text">{{ desc }}</span>
+                            </li>
+                        }
+                    </ul>
                     <div class="tech-stack">
                         @for (tech of experience.techStack; track tech) {
                             <div class="tech-item">
