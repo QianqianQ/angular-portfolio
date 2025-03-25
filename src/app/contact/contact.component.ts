@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ContactInfo } from '../models';
-import * as data from '../../../public/data/data.json';
+// import * as data from '../../../public/data/data.json';
 // import { CONTACT_INFO } from '../data/contactInfo';
+import { DataService } from '../services/data.service';
+
 
 @Component({
   selector: 'app-contact',
@@ -11,5 +13,15 @@ import * as data from '../../../public/data/data.json';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  contactInfo: ContactInfo[] = data.contactInfo;
+  contactInfo: ContactInfo[] = [];
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    this.dataService.getPortfolioData().subscribe((data) => {
+      if (data) {
+        this.contactInfo = data.contactInfo;
+      }
+    });
+  }
 }

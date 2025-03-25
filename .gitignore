@@ -41,5 +41,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/src/app/data/*
-!/src/app/data/.gitkeep
+public/data/
+public/images/
+.vercel
+.env*.local

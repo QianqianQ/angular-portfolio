@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
 import { Experience } from '../models';
-import * as data from '../../../public/data/data.json';
+// import * as data from '../../../public/data/data.json';
 // import { EXPERIENCE } from '../data/experience';
+import { DataService } from '../services/data.service';
+
 
 @Component({
   selector: 'app-experience',
@@ -18,12 +20,22 @@ import * as data from '../../../public/data/data.json';
           stagger(100, [
             animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
           ])
-        ])
+        ], { optional: true })
       ])
     ])
   ]
 })
 
-export class ExperienceComponent {
-  experiences: Experience[] = data.experience;
+export class ExperienceComponent implements OnInit {
+  experiences: Experience[] = [];
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    this.dataService.getPortfolioData().subscribe((data) => {
+      if (data) {
+        this.experiences = data.experience;
+      }
+    });
+  }
 }

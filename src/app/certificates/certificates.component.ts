@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Certificate } from '../models';
-import * as data from '../../../public/data/data.json';
+// import * as data from '../../../public/data/data.json';
 // import { CERTIFICATES } from '../data/certificates';
+import { DataService } from '../services/data.service';
+
 
 @Component({
   selector: 'app-certificates',
@@ -10,6 +12,17 @@ import * as data from '../../../public/data/data.json';
   templateUrl: './certificates.component.html',
   styleUrl: './certificates.component.scss'
 })
-export class CertificatesComponent {
-  certificates: Certificate[] = data.certificates;
+export class CertificatesComponent implements OnInit {
+
+  certificates: Certificate[] = [];
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    this.dataService.getPortfolioData().subscribe((data) => {
+      if (data) {
+        this.certificates = data.certificates;
+      }
+    });
+  }
 }

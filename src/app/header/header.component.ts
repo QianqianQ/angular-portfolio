@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 // import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
-import * as data from '../../../public/data/data.json';
+// import * as data from '../../../public/data/data.json';
 // import { CONTACT_INFO } from '../../../public/data/contactInfo';
 import { ContactInfo } from '../models';
+import { DataService } from '../services/data.service';
+
 
 @Component({
   selector: 'app-header',
@@ -21,7 +23,7 @@ import { ContactInfo } from '../models';
     ])
   ]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
   navItems = [
     { label: 'About', route: '/', fragment: 'about' },
@@ -31,11 +33,20 @@ export class HeaderComponent {
     { label: 'Certificates', route: '/', fragment: 'certificates' },
   ];
   
-  sociaMediaInfo: ContactInfo[] = data.contactInfo;
+  sociaMediaInfo: ContactInfo[] = [];
 
   activeSection: string | null = null;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+    private dataService: DataService) {}
+
+  ngOnInit() {
+    this.dataService.getPortfolioData().subscribe((data) => {
+      if (data) {
+        this.sociaMediaInfo = data.contactInfo;
+      }
+    });
+  }
 
   scrollToSection(fragment: string) {
     // Navigate to the fragment
