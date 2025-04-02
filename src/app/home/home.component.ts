@@ -5,6 +5,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { EducationComponent } from '../education/education.component';
 import { CertificatesComponent } from '../certificates/certificates.component';
+import { ProjectsComponent } from '../projects/projects.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import { CertificatesComponent } from '../certificates/certificates.component';
     SkillsComponent,
     ExperienceComponent,
     EducationComponent,
-    CertificatesComponent
+    CertificatesComponent,
+    ProjectsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

@@ -1,0 +1,38 @@
+<section class="page-section" id="projects">
+    <h2 class="section-title display-4 fw-bold">
+        Projects
+    </h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @for (project of projects; track $index) {
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 overflow-hidden bg-white" style="border-radius: 1rem;">
+                    <div class="card-header bg-gradient-primary text-white py-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <h3 class="project-title mb-0">{{ project.title }}</h3>
+                    </div>
+                    <div class="card-body d-flex flex-column p-4">
+                        <p class="project-description flex-grow-1 text-secondary mb-4">{{ project.description }}</p>
+                        <div class="tech-badges mt-auto">
+                            <div class="d-flex flex-wrap gap-2">
+                                @for (tech of project.technologies; track $index) {
+                                    <span class="badge bg-light text-dark border" style="border-radius: 20px; padding: 0.5rem 1rem;">{{ tech }}</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white d-flex justify-content-end p-4">
+                        @if (project.github) {
+                            <a [href]="project.github" target="_blank" class="btn btn-outline-dark me-2 d-flex align-items-center rounded-pill">
+                                <i class="bi bi-github me-2"></i> GitHub
+                            </a>
+                        }
+                        @if (project.demo) {
+                            <a [href]="project.demo" target="_blank" class="btn btn-dark d-flex align-items-center" style="border-radius: 20px;">
+                                <i class="bi bi-box-arrow-up-right me-2"></i> Live Demo
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

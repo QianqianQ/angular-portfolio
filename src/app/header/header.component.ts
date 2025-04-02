@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit {
     { label: 'Skills', route: '/', fragment: 'skills' },
     { label: 'Experience', route: '/', fragment: 'experience' },
     { label: 'Education', route: '/', fragment: 'education' },
+    { label: 'Projects', route: '/', fragment: 'projects' },
     { label: 'Certificates', route: '/', fragment: 'certificates' },
   ];
   
