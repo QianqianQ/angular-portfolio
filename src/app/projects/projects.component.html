@@ -2,10 +2,10 @@
     <h2 class="section-title display-4 fw-bold">
         Projects
     </h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="row row-cols-1 row-cols-lg-2 g-4">
         @for (project of projects; track $index) {
-            <div class="col">
-                <div class="card h-100 shadow-lg border-0 overflow-hidden bg-white" style="border-radius: 1rem;">
+            <div class="col d-flex">
+                <div class="card shadow-lg border-0 overflow-hidden bg-white" style="border-radius: 1rem; width: 90%; height: auto;">
                     <div class="card-header bg-gradient-primary text-white py-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
                         <h3 class="project-title mb-0">{{ project.title }}</h3>
                     </div>

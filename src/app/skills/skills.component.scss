@@ -1,19 +1,16 @@
 .skills-grid {
-  display: grid;
-  width: 80%;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.5rem;
 
-  &:has(> :nth-last-child(n+10)) {
-    // If there are 6 or more items, limit to 5 columns
-    grid-template-columns: repeat(9, 1fr);
-  }
+  // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  // &:has(> :nth-last-child(n+6)) {
+  //   // If there are 6 or more items, limit to 5 columns
+  //   grid-template-columns: repeat(5, 1fr);
+  // }
 
   .skill-item {
-    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-radius: 8px;
-    width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   
     i {
