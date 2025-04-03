@@ -41,7 +41,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-public/data/
-public/images/
+public/data/*
+!public/data/data.sample.json
 .vercel
 .env*.local

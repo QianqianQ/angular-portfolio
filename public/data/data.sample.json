@@ -1,0 +1,99 @@
+{
+    "about": {
+        "FULL_NAME": "John Doe",
+        "ABOUT_ME": "Hi! I'm a passionate software engineer. I enjoy building scalable and maintainable applications."
+    },
+    "contactInfo": [
+        {
+          "type": "email",
+          "icon": "fas fa-envelope",
+          "label": "Email",
+          "value": "john.doe@example.com",
+          "link": "mailto:john.doe@example.com"
+        },
+        {
+          "type": "linkedin",
+          "icon": "fab fa-linkedin",
+          "label": "LinkedIn",
+          "value": "john-doe",
+          "link": "https://linkedin.com/in/john-doe"
+        },
+        {
+          "type": "github",
+          "icon": "fab fa-github",
+          "label": "GitHub",
+          "value": "johndoe123",
+          "link": "https://github.com/johndoe123"
+        }
+    ],
+    "experience": [
+        {
+            "title": "Senior Software Engineer",
+            "company": "Tech Corp Inc.",
+            "date": "01/2022 - Present",
+            "description": [
+              "Led development of microservices architecture using Node.js and React",
+              "Implemented CI/CD pipelines using Jenkins and Docker",
+              "Optimized application performance reducing load times by 40%",
+              "Mentored junior developers and conducted code reviews"
+            ],
+            "techStack": ["Node.js", "React", "Docker", "Kubernetes", "AWS", "Jenkins"]
+        },
+        {
+          "title": "Software Engineer",
+          "company": "Web Solutions Ltd.",
+          "date": "06/2018 - 12/2021",
+          "description": [
+            "Developed RESTful APIs using Python and Flask",
+            "Implemented front-end features using Angular and TypeScript",
+            "Collaborated with cross-functional teams in Agile environment",
+            "Improved database queries reducing response time by 30%"
+          ],
+          "techStack": ["Python", "Flask", "Angular", "PostgreSQL", "REST API"]
+        }
+    ],
+    "education": [
+        {
+          "degree": "BSc in Computer Science",
+          "institution": "State University",
+          "startDate": "Sep 2014",
+          "endDate": "May 2018"
+        }
+    ],
+    "certificates": [
+        {
+          "title": "AWS Certified Solutions Architect",
+          "certificateLink": "https://example.com/certificate1",
+          "certificateImg": "https://example.com/cert1.jpg"
+        },
+        {
+          "title": "Google Cloud Professional Data Engineer",
+          "certificateLink": "https://example.com/certificate2",
+          "certificateImg": "https://example.com/cert2.jpg"
+        }
+    ],
+    "skills": [
+        { "name": "JavaScript", "icon": "javascript-plain colored" },
+        { "name": "Python", "icon": "python-plain colored" },
+        { "name": "React", "icon": "react-plain colored" },
+        { "name": "Node.js", "icon": "nodejs-plain colored" },
+        { "name": "AWS", "icon": "amazonwebservices-plain-wordmark" },
+        { "name": "Docker", "icon": "docker-plain colored" }
+    ],
+    "projects": [
+      {
+        "title": "E-commerce Platform",
+        "description": "A full-stack e-commerce application with user authentication and payment processing",
+        "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+        "github": "https://github.com/johndoe123/ecommerce",
+        "demo": "https://ecommerce.johndoe.com"
+      },
+      {
+        "title": "Task Management App",
+        "description": "A collaborative task management tool with real-time updates",
+        "technologies": ["Vue.js", "Firebase", "WebSockets"],
+        "github": "https://github.com/johndoe123/task-manager",
+        "demo": "https://tasks.johndoe.com"
+      }
+    ]
+}
