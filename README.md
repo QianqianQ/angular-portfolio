@@ -50,3 +50,21 @@ The application will automatically reload if you change any of the source files 
 ## Deployment
 
 The application is deployed on Vercel.
+
+1. Upload `public/data/data.json` to vercel storage
+(a vercel blob storage needs to be created and the project needs to connect to it.
+Check if `BLOB_READ_WRITE_TOKEN` is available in `.env.local` file and in the vercel project's `Environment Variables`)
+   ```bash
+   node script/uploadFile.js data/data.json
+   ```
+   Or upload the file via vercel dashboard directly.
+
+2. Add url of the uploaded `data.json` (copy it from vercel dashboard) as the project's `PORTFOLIO_JSON_URL` environment variable from vercel dashboard
+
+3. Deploy
+```bash
+# deploy to preview 
+vercel
+# deploy to production
+vercel --prod
+```
