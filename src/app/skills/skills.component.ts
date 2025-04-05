@@ -30,10 +30,7 @@ export class SkillsComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getPortfolioData().subscribe((data) => {
-      if (data) {
-        this.skills = data.skills;
-      }
-    });
+    const data = this.dataService.getPortfolioData();
+    this.skills = data.skills;
   }
 }

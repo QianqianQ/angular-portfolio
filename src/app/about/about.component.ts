@@ -22,14 +22,9 @@ export class AboutComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getPortfolioData().subscribe((data) => {
-      if (data) {
-        this.fullName = data.about.FULL_NAME;
-        this.aboutMeText = data.about.ABOUT_ME;
-        this.contactInfo = data.contactInfo;
-      }
-    });
+    const data = this.dataService.getPortfolioData();
+    this.fullName = data.about.FULL_NAME;
+    this.aboutMeText = data.about.ABOUT_ME;
+    this.contactInfo = data.contactInfo;
   }
-
-
 }

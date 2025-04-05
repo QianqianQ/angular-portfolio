@@ -18,10 +18,7 @@ export class ContactComponent {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getPortfolioData().subscribe((data) => {
-      if (data) {
-        this.contactInfo = data.contactInfo;
-      }
-    });
+    const data = this.dataService.getPortfolioData();
+    this.contactInfo = data.contactInfo;
   }
 }
