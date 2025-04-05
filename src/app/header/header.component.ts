@@ -39,14 +39,11 @@ export class HeaderComponent implements OnInit {
   activeSection: string | null = null;
 
   constructor(private router: Router,
-    private dataService: DataService) {}
+    private dataService: DataService) {
+    }
 
   ngOnInit() {
-    this.dataService.getPortfolioData().subscribe((data) => {
-      if (data) {
-        this.sociaMediaInfo = data.contactInfo;
-      }
-    });
+    this.sociaMediaInfo = this.dataService.getPortfolioData().contactInfo;
   }
 
   scrollToSection(fragment: string) {

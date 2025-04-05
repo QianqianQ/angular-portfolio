@@ -32,10 +32,7 @@ export class ExperienceComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getPortfolioData().subscribe((data) => {
-      if (data) {
-        this.experiences = data.experience;
-      }
-    });
+    const data = this.dataService.getPortfolioData();
+    this.experiences = data.experience;
   }
 }

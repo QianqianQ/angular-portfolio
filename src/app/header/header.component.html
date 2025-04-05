@@ -6,7 +6,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto" [@fadeIn]>
+        <ul class="navbar-nav ms-auto">
           @for (item of navItems; track item.label) {
             <li class="nav-item">
               <a class="nav-link" 
@@ -17,13 +17,15 @@
             </li>
           }
         </ul>
-        <div class="social-links">
-          @for (item of sociaMediaInfo; track item.type) {
-            <a [attr.href]="item.link || null" [attr.target]="item.type !== 'email' ? '_blank' : null"  rel="noopener noreferrer">
-              <i [class]="item.icon"></i>
-            </a>
-          }
-        </div>
+        @if (sociaMediaInfo && sociaMediaInfo.length > 0) {
+          <div class="social-links">
+            @for (item of sociaMediaInfo; track item.type) {
+              <a [attr.href]="item.link || null" [attr.target]="item.type !== 'email' ? '_blank' : null" rel="noopener noreferrer">
+                <i [class]="item.icon"></i>
+              </a>
+            }
+          </div>
+        }
       </div>
     </div>
   </nav>

@@ -19,10 +19,7 @@ export class CertificatesComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getPortfolioData().subscribe((data) => {
-      if (data) {
-        this.certificates = data.certificates;
-      }
-    });
+    const data = this.dataService.getPortfolioData();
+    this.certificates = data.certificates;
   }
 }

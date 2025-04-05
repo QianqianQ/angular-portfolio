@@ -17,10 +17,7 @@ export class ProjectsComponent {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getPortfolioData().subscribe((data) => {
-      if (data) {
-        this.projects = data.projects;
-      }
-    });
+    const data = this.dataService.getPortfolioData();
+    this.projects = data.projects;
   }
 }
