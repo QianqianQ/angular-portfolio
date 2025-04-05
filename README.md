@@ -62,9 +62,17 @@ Check if `BLOB_READ_WRITE_TOKEN` is available in `.env.local` file and in the ve
 2. Add url of the uploaded `data.json` (copy it from vercel dashboard) as the project's `PORTFOLIO_JSON_URL` environment variable from vercel dashboard
 
 3. Deploy
-```bash
-# deploy to preview 
-vercel
-# deploy to production
-vercel --prod
-```
+   ```bash
+   # deploy to preview 
+   vercel
+   # deploy to production
+   vercel --prod
+   ```
+
+4. GitHub Actions for Vercel Preview Deployment:
+   - The project includes a GitHub Actions workflow (`preview.yml`) to automate Vercel preview deployments.
+   - It triggers on pushes to the master branch or can be manually triggered.
+   - The workflow checks out the repository, installs the Vercel CLI, pulls environment info, builds artifacts, and deploys to Vercel.
+   - Ensure the Vercel secrets (`VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, `VERCEL_TOKEN`) are set in the GitHub repository's secrets for successful deployment.
+
+   A preview deployment can be promoted to production directly from the Vercel dashboard once the preview version meets the necessary criteria.
