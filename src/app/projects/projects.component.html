@@ -2,37 +2,49 @@
     <h2 class="section-title display-4 fw-bold">
         Projects
     </h2>
-    <div class="row row-cols-1 row-cols-lg-2 g-4">
+    <div class="container">
         @for (project of projects; track $index) {
-            <div class="col d-flex">
-                <div class="card shadow-lg border-0 overflow-hidden bg-white" style="border-radius: 1rem; width: 90%; height: auto;">
-                    <div class="card-header bg-gradient-primary text-white py-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                        <h3 class="project-title mb-0">{{ project.title }}</h3>
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                        <p class="project-description flex-grow-1 text-secondary mb-4">{{ project.description }}</p>
-                        <div class="tech-badges mt-auto">
-                            <div class="d-flex flex-wrap gap-2">
-                                @for (tech of project.technologies; track $index) {
-                                    <span class="badge bg-light text-dark border" style="border-radius: 20px; padding: 0.5rem 1rem;">{{ tech }}</span>
-                                }
+        <div class="project-card mb-5 p-4">
+            <div class="row g-4">
+                <div class="col">
+                    <img src="{{ project.screenshotUrl }}" class="rounded-3 shadow-lg"
+                        alt="{{ project.title }} screenshot">
+                </div>
+                <div class="col">
+                    <div class="project-content h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="project-title mb-3">{{ project.title }}
+                            </h3>
+                            <p class="project-description mb-4">{{
+                                project.description }}</p>
+                            <div class="tech-badges mb-4">
+                                <div class="d-flex flex-wrap gap-2">
+                                    @for (tech of project.technologies; track $index) {
+                                    <span class="tech-badge">
+                                        {{ tech }}
+                                    </span>
+                                    }
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer bg-white d-flex justify-content-end p-4">
-                        @if (project.github) {
-                            <a [href]="project.github" target="_blank" class="btn btn-outline-dark me-2 d-flex align-items-center rounded-pill">
-                                <i class="bi bi-github me-2"></i> GitHub
+                        <div class="project-links d-flex gap-2">
+                            @if (project.github) {
+                            <a [href]="project.github" target="_blank"
+                                class="github-btn btn d-flex align-items-center rounded-pill px-3 py-2">
+                                <i class="bi bi-github" style="font-size: 1.1rem;"></i> GitHub
                             </a>
-                        }
-                        @if (project.demo) {
-                            <a [href]="project.demo" target="_blank" class="btn btn-dark d-flex align-items-center" style="border-radius: 20px;">
-                                <i class="bi bi-box-arrow-up-right me-2"></i> Live Demo
+                            }
+                            @if (project.demo) {
+                            <a [href]="project.demo" target="_blank"
+                                class="demo-btn btn d-flex align-items-center rounded-pill px-3 py-2">
+                                <i class="bi bi-box-arrow-up-right"></i> Live Demo
                             </a>
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         }
     </div>
 </section>

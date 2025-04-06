@@ -5,4 +5,5 @@ export interface Project {
     technologies: string[];
     github?: string;
     demo?: string;
+    screenshotUrl?: string;
 }
