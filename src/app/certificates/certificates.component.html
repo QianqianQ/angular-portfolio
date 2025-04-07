@@ -2,19 +2,20 @@
     <h2 class="section-title display-4 fw-bold">
         Certificates
     </h2>
-    <div class="certificates-grid">
+
+    <div class="certificates-list">
         @for (cert of certificates; track cert.title) {
-            <div class="certificate-card">
-                <div class="certificate-image">
-                    <img [src]="cert.certificateImg" [alt]="cert.title">
-                </div>
-                <div class="certificate-content">
-                    <h3>{{ cert.title }}</h3>
+            <div class="certificate-item mb-4 p-4 position-relative">
+                <div class="certificate-content d-flex justify-content-between align-items-center position-relative">
+                    <div class="certificate-info">
+                        <h3 class="mb-1">
+                            {{ cert.title }}
+                        </h3>
+                    </div>
+
                     @if (cert.certificateLink) {
-                        <a [href]="cert.certificateLink" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="view-certificate">
+                        <a [href]="cert.certificateLink" target="_blank" rel="noopener noreferrer"
+                            class="view-certificate btn d-flex align-items-center gap-2 rounded-pill px-4 py-2 position-relative">
                             View Certificate
                             <i class="fas fa-external-link-alt"></i>
                         </a>

@@ -1,100 +1,38 @@
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem 0;
-}
-
-.certificate-card {
+.certificate-item {
     background: var(--container-color);
     border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(106, 17, 203, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 25px rgba(106, 17, 203, 0.2);
-
-        .certificate-image img {
-            transform: scale(1.05);
-        }
-    }
-
-    .certificate-image {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-        border-bottom: 2px solid rgba(106, 17, 203, 0.1);
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
     }
 
     .certificate-content {
-        padding: 1.5rem;
         text-align: center;
 
         h3 {
-            color: var(--title-color);
+            color: #6a11cb;
             font-size: 1.1rem;
-            margin-bottom: 1rem;
             font-weight: 600;
-            line-height: 1.4;
+            text-shadow: 0 1px 2px rgba(106, 17, 203, 0.1);
         }
 
         .view-certificate {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            color: var(--primary-color);
+            color: #6a11cb;
             font-size: 0.9rem;
             font-weight: 500;
-            border: 2px solid var(--primary-color);
-            background: transparent;
+            border: 1px solid rgba(106, 17, 203, 0.1);
+            background: linear-gradient(145deg, rgba(106, 17, 203, 0.1), rgba(106, 17, 203, 0.15));
             transition: all 0.3s ease;
 
-            i {
-                font-size: 0.8rem;
-                transition: transform 0.3s ease;
-            }
-
             &:hover {
-                background: var(--primary-color);
-                color: white;
                 transform: translateY(-2px);
 
                 i {
-                    transform: translateX(3px);
+                    transform: translateX(1px);
                 }
-            }
-        }
-    }
-}
-
-// Responsive adjustments
-@media (max-width: 768px) {
-    .certificates-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .certificate-card {
-        .certificate-image {
-            height: 180px;
-        }
-
-        .certificate-content {
-            padding: 1.2rem;
-
-            h3 {
-                font-size: 1rem;
             }
         }
     }
