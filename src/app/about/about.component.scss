@@ -1,8 +1,8 @@
 .about-section {
-  padding-top: 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .about-container {
@@ -12,7 +12,7 @@
     gap: 4rem;
     padding: 0;
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
     min-height: fit-content;
 }
 
@@ -46,22 +46,23 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
-    max-width: 700px;
     margin: 0 auto;
 
     .about-text {
         width: 100%;
         
         p {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             line-height: 1.8;
             color: var(--text-color);
-            margin-bottom: 2rem;
-            animation: fadeIn 1s ease-out;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            max-width: 500px;
+            animation: fadeInUp 1s ease-out;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+            max-width: 600px;
             margin: 0 auto;
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
         }
     }
 }
@@ -114,15 +115,12 @@
 
 // Responsive adjustments
 @media (max-width: 1200px) {
-    .about-section {
-        padding: 1rem;
-    }
-    
     .about-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
         min-height: fit-content;
+        gap: 2rem;
     }
 
     .animated-name {
@@ -134,8 +132,14 @@
         
         .about-text {
             p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
         }
     }
 }
+
+@media (max-width: 768px) {
+    .about-section {
+      min-height: auto;
+    }
+  }

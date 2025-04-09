@@ -93,7 +93,8 @@
         "description": "A collaborative task management tool with real-time updates",
         "technologies": ["Vue.js", "Firebase", "WebSockets"],
         "github": "https://github.com/johndoe123/task-manager",
-        "demo": "https://tasks.johndoe.com"
+        "demo": "https://tasks.johndoe.com",
+        "screenshotUrl": "https://example.com/task-manager-screenshot.jpg"
       }
     ]
 }
