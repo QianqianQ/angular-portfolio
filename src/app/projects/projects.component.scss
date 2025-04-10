@@ -3,6 +3,7 @@
     border: 1px solid rgba(106, 17, 203, 0.1);
     box-shadow: 0 4px 20px rgba(106, 17, 203, 0.15);
     transition: all 0.3s ease;
+    font-family: var(--text-font-family);
 
     &:hover {
         transform: scale(1.05);
@@ -16,28 +17,34 @@
     }
 
     .project-title {
-        color: #6a11cb;
-        font-weight: 600;
+        margin-bottom: 0.5rem;
     }
 
     .project-description {
         color: #4b5563;
-        line-height: 1.5;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+        margin-bottom: 1rem;
     }
 
     .tech-badge {
         color: #6a11cb;
         font-size: 0.8rem;
         font-weight: 500;
+        letter-spacing: 0.1px;
         border-radius: 0.5rem;
         padding: 0.4rem 0.8rem;
-        background: rgba(106, 17, 203, 0.1); 
+        background: rgba(106, 17, 203, 0.1);
         transition: all 0.2s ease;
     }
 
     .github-btn {
         color: #ecf0f1;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.1px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
         background: linear-gradient(145deg, #2c3e50, #1c2833);
@@ -45,7 +52,9 @@
 
     .demo-btn {
         color: white;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.1px;
         box-shadow: 0 2px 6px rgba(41, 128, 185, 0.25);
         background: linear-gradient(145deg, #2980b9, #1c5980);
     }

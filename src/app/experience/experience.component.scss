@@ -2,6 +2,7 @@
   position: relative;
   margin: 0 auto;
   padding: 20px 0;
+  font-family: var(--text-font-family);
 
   &::before {
     content: '';
@@ -32,7 +33,7 @@
     }
   }
 
-.timeline-content {
+  .timeline-content {
     background: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
@@ -46,22 +47,32 @@
         margin-bottom: 0.5rem;
 
         h3 {
-            color: #6a11cb;
             margin: 0;  // Remove default margin
         }
 
         .date {
             color: #777;
             font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.1px;
         }
     }
 
     h4 {
         color: #333;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0.75rem 0 0.5rem;
+        letter-spacing: -0.1px;
     }
 
     p {
         color: #555;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        font-weight: 400;
+        margin: 0;
+        letter-spacing: 0.1px;
     }
 
     .description-list {
@@ -72,7 +83,10 @@
     
     .description-item {
         margin-bottom: 0.75rem;
-        line-height: 1;
+        line-height: 1.5;
+        font-size: 0.95rem;
+        font-weight: 400;
+        letter-spacing: 0.05px;
     }
     
     .bullet {
@@ -96,6 +110,8 @@
             background-color: rgba(106, 17, 203, 0.1);
             border-radius: 2rem;
             font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05px;
             color: #6a11cb;
             transition: all 0.3s ease;
 

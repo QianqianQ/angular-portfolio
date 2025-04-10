@@ -3,6 +3,7 @@
     border-radius: 1rem;
     border: 1px solid rgba(106, 17, 203, 0.08);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: var(--text-font-family);
 
     &:hover {
         transform: translateY(-5px);
@@ -12,26 +13,24 @@
     .certificate-content {
         text-align: center;
 
-        h3 {
-            color: #6a11cb;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-shadow: 0 1px 2px rgba(106, 17, 203, 0.1);
-        }
-
         .view-certificate {
             color: #6a11cb;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 500;
+            letter-spacing: 0.1px;
             border: 1px solid rgba(106, 17, 203, 0.1);
+            border-radius: 0.75rem;
+            padding: 0.5rem 1.25rem;
             background: linear-gradient(145deg, rgba(106, 17, 203, 0.1), rgba(106, 17, 203, 0.15));
             transition: all 0.3s ease;
 
             &:hover {
                 transform: translateY(-2px);
+                box-shadow: 0 2px 6px rgba(106, 17, 203, 0.15);
 
                 i {
                     transform: translateX(1px);
+                    transition: transform 0.2s ease;
                 }
             }
         }
