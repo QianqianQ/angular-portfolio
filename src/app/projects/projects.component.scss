@@ -1,61 +1,114 @@
+.page-section {
+    .container {
+        max-width: 900px;
+    }
+}
+
 .project-card {
     border-radius: 20px;
     border: 1px solid rgba(106, 17, 203, 0.1);
     box-shadow: 0 4px 20px rgba(106, 17, 203, 0.15);
     transition: all 0.3s ease;
     font-family: var(--text-font-family);
+    background: var(--surface-card);
+    padding: 1rem;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
         box-shadow: 0 4px 20px rgba(106, 17, 203, 0.25);
     }
 
-    img {
+    .project-image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        transition: transform 0.3s ease;
+        aspect-ratio: 16/9;
         width: 100%;
-        height: 100%;
-        object-fit: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--surface-card);
+        border: 1px solid rgba(106, 17, 203, 0.2);
+        padding: 0.5rem;
+        box-shadow: 0 4px 15px rgba(106, 17, 203, 0.1);
+
+        .project-image {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain;
+            display: block;
+            border-radius: 0.5rem;
+        }
     }
 
-    .project-title {
-        margin-bottom: 0.5rem;
+    .project-content {
+        padding: 1rem 0;
+
+        @media (min-width: 768px) {
+            padding: 0 1rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
     }
 
-    .project-description {
-        color: #4b5563;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        font-weight: 400;
-        letter-spacing: 0.1px;
-        margin-bottom: 1rem;
+    .tech-badges {
+        margin-bottom: 1.5rem;
     }
 
     .tech-badge {
         color: #6a11cb;
         font-size: 0.8rem;
         font-weight: 500;
-        letter-spacing: 0.1px;
-        border-radius: 0.5rem;
-        padding: 0.4rem 0.8rem;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
         background: rgba(106, 17, 203, 0.1);
-        transition: all 0.2s ease;
+        border: 1px solid var(--surface-border);
+    }
+
+    .project-links {
+        margin-top: 1rem;
+    }
+
+    .github-btn, .demo-btn {
+        color: #ecf0f1;
+        font-size: 0.8rem;
+        font-weight: 500;
+        transition: transform 0.2s ease;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        &:hover {
+            transform: translateY(-2px);
+        }
     }
 
     .github-btn {
-        color: #ecf0f1;
-        font-size: 0.9rem;
-        font-weight: 500;
-        letter-spacing: 0.1px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        background: linear-gradient(145deg, #2c3e50, #1c2833);
+        background: #24292e;
+        color: white;
+        
+        &:hover {
+            background: #2f363d;
+        }
     }
 
     .demo-btn {
+        background: var(--primary-color);
         color: white;
-        font-size: 0.9rem;
-        font-weight: 500;
-        letter-spacing: 0.1px;
-        box-shadow: 0 2px 6px rgba(41, 128, 185, 0.25);
-        background: linear-gradient(145deg, #2980b9, #1c5980);
+        
+        &:hover {
+            background: var(--primary-color-darker);
+        }
     }
 }

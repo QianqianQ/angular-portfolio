@@ -6,4 +6,6 @@ export interface Project {
     github?: string;
     demo?: string;
     screenshotUrl?: string;
+    imageWidth?: number;
+    imageHeight?: number;
 }
