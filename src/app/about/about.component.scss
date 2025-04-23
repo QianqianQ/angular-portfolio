@@ -52,17 +52,16 @@
         width: 100%;
         
         p {
-            font-size: 1.4rem;
-            line-height: 1.8;
+            font-size: 1.25rem;
+            line-height: 1.7;
             color: var(--text-color);
             animation: fadeInUp 1s ease-out;
             font-weight: 400;
-            letter-spacing: 0.4px;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
-            text-align: justify;
-            text-justify: inter-word;
+            text-align: left;
             hyphens: auto;
+            opacity: 0.9;
         }
     }
 }
