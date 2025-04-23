@@ -55,7 +55,7 @@ The application is deployed on Vercel.
 (a vercel blob storage needs to be created and the project needs to connect to it.
 Check if `BLOB_READ_WRITE_TOKEN` is available in `.env.local` file and in the vercel project's `Environment Variables`)
    ```bash
-   node script/uploadFile.js data/data.json
+   node scripts/uploadFile.js data/data.json
    ```
    Or upload the file via vercel dashboard directly.
 

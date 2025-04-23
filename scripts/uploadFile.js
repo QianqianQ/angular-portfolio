@@ -37,6 +37,7 @@ async function uploadFile(relativeFilePath) {
     access: "public",
     contentType: contentType,
     token: process.env['BLOB_READ_WRITE_TOKEN'],
+    addRandomSuffix: false
   });
 
   console.log(`File uploaded (${contentType}):`, blob.url);
