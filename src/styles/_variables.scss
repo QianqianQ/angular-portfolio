@@ -1,30 +1,80 @@
 :root {
-  // Light theme variables
-  --primary-color: #007bff;
-  --accent-color: #6a11cb;
-  --secondary-color: #2575fc;
-  --background-color: #ffffff;
-  --container-color: #ffffff;
-  --surface-card: #ffffff;
-  --text-color: #333333;
-  --title-color: #333333;
-  --first-color: #007bff;
-  --hover-color: #f5f5f5;
-  --border-color: #e0e0e0;
-  --header-height: 56px;
-  --text-font-family: 'Inter', sans-serif;
+  // Modern color palette - Light theme
+  --primary-color: #6366f1; // Indigo
+  --accent-color: #8b5cf6; // Purple
+  --secondary-color: #06b6d4; // Cyan
+  --success-color: #10b981; // Emerald
+  --warning-color: #f59e0b; // Amber
+  --error-color: #ef4444; // Red
+  
+  // Backgrounds with subtle gradients
+  --background-color: #fafafa;
+  --background-gradient: linear-gradient(135deg, #fafafa 0%, #f4f4f5 100%);
+  --container-color: rgba(255, 255, 255, 0.8);
+  --surface-card: rgba(255, 255, 255, 0.9);
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  
+  // Text colors with better contrast
+  --text-color: #1f2937; // Gray-800
+  --text-secondary: #6b7280; // Gray-500
+  --text-muted: #9ca3af; // Gray-400
+  --title-color: #111827; // Gray-900
+  
+  // Interactive states
+  --hover-color: rgba(99, 102, 241, 0.05);
+  --border-color: rgba(229, 231, 235, 0.8); // Gray-200 with opacity
+  --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  // Layout
+  --header-height: 64px;
+  --border-radius: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 20px;
+  
+  // Typography
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Cal Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --text-font-family: var(--font-family-primary);
+  
+  // Color RGB values for alpha usage
+  --primary-rgb: 99, 102, 241;
+  --accent-rgb: 139, 92, 246;
+  --secondary-rgb: 6, 182, 212;
 }
 
 .dark-theme {
-  --primary-color: #4dabf7;
-  --accent-color: #8b5cf6;
-  --secondary-color: #06b6d4;
-  --background-color: #1a1a1a;
-  --container-color: #2d2d2d;
-  --surface-card: #2d2d2d;
-  --text-color: #ffffff;
+  // Modern dark theme with warmer tones
+  --primary-color: #818cf8; // Lighter indigo for dark mode
+  --accent-color: #a78bfa; // Lighter purple
+  --secondary-color: #22d3ee; // Lighter cyan
+  --success-color: #34d399; // Lighter emerald
+  --warning-color: #fbbf24; // Lighter amber
+  --error-color: #f87171; // Lighter red
+  
+  // Dark backgrounds with subtle gradients
+  --background-color: #0f0f23;
+  --background-gradient: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+  --container-color: rgba(26, 26, 46, 0.8);
+  --surface-card: rgba(31, 31, 51, 0.9);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  
+  // Dark text colors
+  --text-color: #f9fafb; // Gray-50
+  --text-secondary: #d1d5db; // Gray-300
+  --text-muted: #9ca3af; // Gray-400
   --title-color: #ffffff;
-  --first-color: #4dabf7;
-  --hover-color: #2d2d2d;
-  --border-color: #404040;
+  
+  // Dark interactive states
+  --hover-color: rgba(129, 140, 248, 0.1);
+  --border-color: rgba(55, 65, 81, 0.8); // Gray-700 with opacity
+  --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  
+  // Dark color RGB values
+  --primary-rgb: 129, 140, 248;
+  --accent-rgb: 167, 139, 250;
+  --secondary-rgb: 34, 211, 238;
 }
