@@ -1,11 +1,11 @@
 .skill-category {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   
   .category-title {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-align: center;
     position: relative;
     
@@ -13,10 +13,10 @@
       content: '';
       position: absolute;
       left: 50%;
-      bottom: -8px;
+      bottom: -6px;
       transform: translateX(-50%);
-      width: 40px;
-      height: 3px;
+      width: 30px;
+      height: 2px;
       background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
       border-radius: 2px;
     }
@@ -25,11 +25,11 @@
 
 .skills-grid {
   margin: 0 auto;
-  padding: 1rem;
-  gap: 1rem;
+  padding: 0.5rem;
+  gap: 0.5rem;
 
   .skill-item {
-    padding: 0.3rem;
+    padding: 0.5rem 0.25rem;
     border-radius: var(--border-radius);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--glass-bg);
@@ -39,12 +39,13 @@
     box-shadow: var(--shadow-light);
     position: relative;
     overflow: hidden;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.5rem;
     aspect-ratio: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 80px;
 
     &::before {
       content: '';
@@ -60,8 +61,8 @@
     }
   
     i {
-      font-size: 2.5rem;
-      margin-bottom: 0.15rem;
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       
       // Keep original devicon colors
@@ -101,17 +102,17 @@
     }
   
     span {
-      font-size: 0.6rem;
+      font-size: 0.65rem;
       font-weight: 600;
       color: var(--text-color);
       letter-spacing: 0.025em;
       font-family: var(--font-family-primary);
       text-align: center;
-      line-height: 1.2;
+      line-height: 1.1;
     }
   
     &:hover {
-      transform: translateY(-8px) scale(1.02);
+      transform: translateY(-4px) scale(1.05);
       box-shadow: var(--shadow-large);
       border-color: rgba(var(--primary-rgb), 0.2);
 
@@ -132,33 +133,35 @@
 
   // Responsive spacing adjustments
   @media (max-width: 768px) {
-    gap: 0.75rem;
-    padding: 0.5rem;
+    gap: 0.4rem;
+    padding: 0.25rem;
     
     .skill-item {
-      margin-bottom: 0.1rem;
-      padding: 0.25rem;
+      margin-bottom: 0.4rem;
+      padding: 0.4rem 0.2rem;
+      min-height: 70px;
       
       i {
-        font-size: 2rem;
-        margin-bottom: 0.1rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
       }
       
       span {
-        font-size: 0.5rem;
+        font-size: 0.55rem;
       }
     }
   }
 
   @media (min-width: 1200px) {
-    gap: 1.25rem;
+    gap: 0.75rem;
     
     .skill-item {
-      margin-bottom: 0.2rem;
-      padding: 0.4rem;
+      margin-bottom: 0.6rem;
+      padding: 0.6rem 0.3rem;
+      min-height: 90px;
       
       i {
-        font-size: 3rem;
+        font-size: 2rem;
       }
       
       span {
