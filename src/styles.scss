@@ -92,33 +92,11 @@ button {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  background: var(--background-gradient);
+  background: transparent;
   color: var(--text-color);
   scroll-margin-top: calc(var(--header-height) + 2rem);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  
-  // Glassmorphism effect for sections
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: var(--border-radius-lg);
-    border: 1px solid var(--border-color);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  &:hover::before {
-    opacity: 1;
-  }
   
   .section-title {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color), var(--secondary-color));
