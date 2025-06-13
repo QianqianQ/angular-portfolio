@@ -1,100 +1,158 @@
 {
-    "about": {
-        "FULL_NAME": "John Doe",
-        "ABOUT_ME": "Hi! I'm a passionate software engineer. I enjoy building scalable and maintainable applications."
+  "about": {
+    "FULL_NAME": "John Doe",
+    "ABOUT_ME": "I am a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions and building scalable applications that make a difference. With a strong foundation in both frontend and backend development, I enjoy tackling complex challenges and continuously learning new technologies."
+  },
+  "contactInfo": [
+    {
+      "type": "email",
+      "icon": "fas fa-envelope",
+      "label": "Email",
+      "value": "john.doe@example.com",
+      "link": "mailto:john.doe@example.com"
     },
-    "contactInfo": [
-        {
-          "type": "email",
-          "icon": "fas fa-envelope",
-          "label": "Email",
-          "value": "john.doe@example.com",
-          "link": "mailto:john.doe@example.com"
-        },
-        {
-          "type": "linkedin",
-          "icon": "fab fa-linkedin",
-          "label": "LinkedIn",
-          "value": "john-doe",
-          "link": "https://linkedin.com/in/john-doe"
-        },
-        {
-          "type": "github",
-          "icon": "fab fa-github",
-          "label": "GitHub",
-          "value": "johndoe123",
-          "link": "https://github.com/johndoe123"
-        }
-    ],
-    "experience": [
-        {
-            "title": "Senior Software Engineer",
-            "company": "Tech Corp Inc.",
-            "date": "01/2022 - Present",
-            "description": [
-              "Led development of microservices architecture using Node.js and React",
-              "Implemented CI/CD pipelines using Jenkins and Docker",
-              "Optimized application performance reducing load times by 40%",
-              "Mentored junior developers and conducted code reviews"
-            ],
-            "techStack": ["Node.js", "React", "Docker", "Kubernetes", "AWS", "Jenkins"]
-        },
-        {
-          "title": "Software Engineer",
-          "company": "Web Solutions Ltd.",
-          "date": "06/2018 - 12/2021",
-          "description": [
-            "Developed RESTful APIs using Python and Flask",
-            "Implemented front-end features using Angular and TypeScript",
-            "Collaborated with cross-functional teams in Agile environment",
-            "Improved database queries reducing response time by 30%"
-          ],
-          "techStack": ["Python", "Flask", "Angular", "PostgreSQL", "REST API"]
-        }
-    ],
-    "education": [
-        {
-          "degree": "BSc in Computer Science",
-          "institution": "State University",
-          "startDate": "Sep 2014",
-          "endDate": "May 2018"
-        }
-    ],
-    "certificates": [
-        {
-          "title": "AWS Certified Solutions Architect",
-          "certificateLink": "https://example.com/certificate1",
-          "certificateImg": "https://example.com/cert1.jpg"
-        },
-        {
-          "title": "Google Cloud Professional Data Engineer",
-          "certificateLink": "https://example.com/certificate2",
-          "certificateImg": "https://example.com/cert2.jpg"
-        }
-    ],
-    "skills": [
-        { "name": "JavaScript", "icon": "javascript-plain colored" },
-        { "name": "Python", "icon": "python-plain colored" },
-        { "name": "React", "icon": "react-plain colored" },
-        { "name": "Node.js", "icon": "nodejs-plain colored" },
-        { "name": "AWS", "icon": "amazonwebservices-plain-wordmark" },
-        { "name": "Docker", "icon": "docker-plain colored" }
-    ],
-    "projects": [
-      {
-        "title": "E-commerce Platform",
-        "description": "A full-stack e-commerce application with user authentication and payment processing",
-        "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
-        "github": "https://github.com/johndoe123/ecommerce",
-        "demo": "https://ecommerce.johndoe.com"
-      },
-      {
-        "title": "Task Management App",
-        "description": "A collaborative task management tool with real-time updates",
-        "technologies": ["Vue.js", "Firebase", "WebSockets"],
-        "github": "https://github.com/johndoe123/task-manager",
-        "demo": "https://tasks.johndoe.com",
-        "screenshotUrl": "https://example.com/task-manager-screenshot.jpg"
-      }
-    ]
+    {
+      "type": "linkedin",
+      "icon": "fab fa-linkedin",
+      "label": "LinkedIn",
+      "value": "linkedin.com/in/johndoe",
+      "link": "https://linkedin.com/in/johndoe"
+    },
+    {
+      "type": "github",
+      "icon": "fab fa-github",
+      "label": "GitHub",
+      "value": "github.com/johndoe",
+      "link": "https://github.com/johndoe"
+    }
+  ],
+  "skillCategories": [
+    {
+      "category": "Frontend Development",
+      "skills": [
+        { "name": "JavaScript", "icon": "javascript-plain" },
+        { "name": "TypeScript", "icon": "typescript-plain" },
+        { "name": "React", "icon": "react-original" },
+        { "name": "Angular", "icon": "angular-plain" },
+        { "name": "HTML5", "icon": "html5-plain" },
+        { "name": "CSS3", "icon": "css3-plain" },
+        { "name": "Sass", "icon": "sass-original" },
+        { "name": "Bootstrap", "icon": "bootstrap-plain" },
+        { "name": "Tailwind CSS", "icon": "tailwindcss-plain" }
+      ]
+    },
+    {
+      "category": "Backend Development",
+      "skills": [
+        { "name": "Node.js", "icon": "nodejs-plain" },
+        { "name": "Python", "icon": "python-plain" },
+        { "name": "Java", "icon": "java-plain" },
+        { "name": "C#", "icon": "csharp-plain" }
+      ]
+    },
+    {
+      "category": "Database & Storage",
+      "skills": [
+        { "name": "MongoDB", "icon": "mongodb-plain" },
+        { "name": "MySQL", "icon": "mysql-plain" },
+        { "name": "PostgreSQL", "icon": "postgresql-plain" },
+        { "name": "Redis", "icon": "redis-plain" }
+      ]
+    },
+    {
+      "category": "DevOps & Cloud",
+      "skills": [
+        { "name": "Docker", "icon": "docker-plain" },
+        { "name": "Kubernetes", "icon": "kubernetes-plain" },
+        { "name": "AWS", "icon": "aws-original" },
+        { "name": "Google Cloud", "icon": "googlecloud-plain" },
+        { "name": "Azure", "icon": "azure-plain" },
+        { "name": "Nginx", "icon": "nginx-original" }
+      ]
+    },
+    {
+      "category": "Tools & Others",
+      "skills": [
+        { "name": "Git", "icon": "git-plain" },
+        { "name": "GitHub", "icon": "github-original" },
+        { "name": "VS Code", "icon": "vscode-plain" },
+        { "name": "IntelliJ", "icon": "intellij-plain" },
+        { "name": "Linux", "icon": "linux-plain" },
+        { "name": "Ubuntu", "icon": "ubuntu-plain" },
+        { "name": "Figma", "icon": "figma-plain" }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Full Stack Developer",
+      "company": "Tech Solutions Inc.",
+      "date": "2022 - Present",
+      "description": [
+        "Led development of scalable web applications using React and Node.js",
+        "Implemented microservices architecture reducing system latency by 40%",
+        "Mentored junior developers and conducted code reviews",
+        "Collaborated with cross-functional teams to deliver high-quality products"
+      ],
+      "techStack": ["React", "Node.js", "TypeScript", "MongoDB", "AWS", "Docker"]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "Digital Agency Co.",
+      "date": "2020 - 2022",
+      "description": [
+        "Developed responsive web applications using modern JavaScript frameworks",
+        "Optimized application performance resulting in 50% faster load times",
+        "Implemented automated testing strategies improving code quality",
+        "Worked closely with designers to create pixel-perfect user interfaces"
+      ],
+      "techStack": ["JavaScript", "React", "CSS3", "Sass", "Git", "Webpack"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University of Technology",
+      "startDate": "2016",
+      "endDate": "2020",
+      "details": [
+        "Graduated Magna Cum Laude with GPA 3.8/4.0",
+        "Specialized in Software Engineering and Web Development",
+        "Active member of Computer Science Student Association",
+        "Completed capstone project on machine learning applications"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-Commerce Platform",
+      "date": "2023",
+      "description": "A full-stack e-commerce platform built with React and Node.js, featuring user authentication, payment processing, and admin dashboard. Implemented responsive design and optimized for performance.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe API", "JWT", "Material-UI"],
+      "github": "https://github.com/johndoe/ecommerce-platform",
+      "demo": "https://ecommerce-demo.example.com",
+      "screenshotUrl": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg"
+    },
+    {
+      "title": "Task Management App",
+      "date": "2023",
+      "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Built with modern web technologies and deployed on AWS.",
+      "technologies": ["Angular", "TypeScript", "Firebase", "Socket.io", "Bootstrap"],
+      "github": "https://github.com/johndoe/task-manager",
+      "demo": "https://taskmanager-demo.example.com",
+      "screenshotUrl": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+    }
+  ],
+  "certificates": [
+    {
+      "title": "AWS Certified Solutions Architect",
+      "certificateImg": "aws-cert.jpg",
+      "certificateLink": "https://aws.amazon.com/certification/"
+    },
+    {
+      "title": "Google Cloud Professional Developer",
+      "certificateImg": "gcp-cert.jpg",
+      "certificateLink": "https://cloud.google.com/certification/"
+    }
+  ]
 }

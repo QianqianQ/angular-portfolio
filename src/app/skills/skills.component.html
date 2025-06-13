@@ -3,13 +3,18 @@
         Skills
     </h2>
     <div class="container">
-        <div class="skills-grid row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-4">
-            @for (skill of skills; track skill.name) {
-            <div class="skill-item col d-flex flex-column align-items-center text-center">
-                <i class="devicon-large devicon-{{ skill.icon }} mb-2"></i>
-                <span class="skill-name">{{ skill.name }}</span>
+        @for (skillCategory of skillCategories; track skillCategory.category) {
+            <div class="skill-category mb-5">
+                <h3 class="category-title h3-title mb-4">{{ skillCategory.category }}</h3>
+                <div class="skills-grid row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-4">
+                    @for (skill of skillCategory.skills; track skill.name) {
+                        <div class="skill-item col d-flex flex-column align-items-center text-center">
+                            <i class="devicon-large devicon-{{ skill.icon }} mb-2"></i>
+                            <span class="skill-name">{{ skill.name }}</span>
+                        </div>
+                    }
+                </div>
             </div>
-            }
-        </div>
+        }
     </div>
 </section>

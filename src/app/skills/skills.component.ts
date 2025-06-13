@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
-import { Skill } from '../models';
-// import * as data from '../../../public/data/data.json';
-// import { SKILLS } from '../data/skills';
+import { SkillCategory } from '../models';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -25,12 +23,12 @@ import { DataService } from '../services/data.service';
   ]
 })
 export class SkillsComponent implements OnInit {
-  skills: Skill[] = [];
+  skillCategories: SkillCategory[] = [];
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
     const data = this.dataService.getPortfolioData();
-    this.skills = data.skills;
+    this.skillCategories = data.skillCategories;
   }
 }
