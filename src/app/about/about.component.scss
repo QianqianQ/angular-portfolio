@@ -29,12 +29,7 @@
   margin: 0 auto;
   width: 95%;
   min-height: fit-content;
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: var(--border-radius-xl);
   padding: 3rem;
-  box-shadow: var(--shadow-large);
 }
 
 .name-section {
