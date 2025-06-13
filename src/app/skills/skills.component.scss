@@ -29,7 +29,7 @@
   gap: 0.5rem;
 
   .skill-item {
-    padding: 0.15rem 0.1rem;
+    padding: 0.05rem;
     border-radius: var(--border-radius);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--glass-bg);
@@ -138,7 +138,7 @@
     
     .skill-item {
       margin-bottom: 0.3rem;
-      padding: 0.1rem 0.05rem;
+      padding: 0.03rem;
       min-height: 55px;
       
       i {
@@ -157,7 +157,7 @@
     
     .skill-item {
       margin-bottom: 0.5rem;
-      padding: 0.2rem 0.15rem;
+      padding: 0.08rem;
       min-height: 75px;
       
       i {
