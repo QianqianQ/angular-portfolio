@@ -4,7 +4,7 @@
   gap: 1rem;
 
   .skill-item {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.75rem;
     border-radius: var(--border-radius);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--glass-bg);
@@ -35,8 +35,8 @@
     }
   
     i {
-      font-size: 2.5rem;
-      margin-bottom: 0.75rem;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       
       // Keep original devicon colors
@@ -76,7 +76,7 @@
     }
   
     span {
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       font-weight: 600;
       color: var(--text-color);
       letter-spacing: 0.025em;
@@ -112,15 +112,15 @@
     
     .skill-item {
       margin-bottom: 0.5rem;
-      padding: 1rem 0.75rem;
+      padding: 0.75rem 0.5rem;
       
       i {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.375rem;
       }
       
       span {
-        font-size: 0.75rem;
+        font-size: 0.625rem;
       }
     }
   }
@@ -130,14 +130,14 @@
     
     .skill-item {
       margin-bottom: 0.75rem;
-      padding: 1.75rem 1.25rem;
+      padding: 1.25rem 1rem;
       
       i {
-        font-size: 3rem;
+        font-size: 2.25rem;
       }
       
       span {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
     }
   }
