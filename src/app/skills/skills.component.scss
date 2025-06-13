@@ -1,6 +1,7 @@
 .skills-grid {
   margin: 0 auto;
   padding: 1rem;
+  gap: 1.5rem;
 
   .skill-item {
     padding: 1.5rem 1rem;
@@ -13,6 +14,7 @@
     box-shadow: var(--shadow-light);
     position: relative;
     overflow: hidden;
+    margin-bottom: 1rem;
 
     &::before {
       content: '';
@@ -59,6 +61,25 @@
       span {
         color: var(--primary-color);
       }
+    }
+  }
+
+  // Responsive spacing adjustments
+  @media (max-width: 768px) {
+    gap: 1rem;
+    padding: 0.5rem;
+    
+    .skill-item {
+      margin-bottom: 0.75rem;
+      padding: 1.25rem 0.75rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    gap: 2rem;
+    
+    .skill-item {
+      margin-bottom: 1.25rem;
     }
   }
 }
