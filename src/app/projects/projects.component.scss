@@ -1,15 +1,87 @@
 .project-card {
-    border-radius: 20px;
-    border: 1px solid rgba(106, 17, 203, 0.1);
-    box-shadow: 0 4px 20px rgba(106, 17, 203, 0.15);
+    border-radius: 8px;
+    border: 1px solid rgba(var(--accent-color-rgb), 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     font-family: var(--text-font-family);
+    background: var(--container-color);
 
     &:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 20px rgba(106, 17, 203, 0.25);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        background: var(--container-color);
     }
 
+    // Projects without images - flex column layout
+    &.no-image {
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: var(--container-color);
+
+        .project-content-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2rem;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            .project-header {
+                .project-title {
+                    font-size: 1.5rem;
+                    margin-bottom: 0;
+                    color: var(--accent-color);
+                    font-weight: 600;
+                    text-align: center;
+                }
+            }
+
+            .project-body {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 600px;
+
+                .project-description {
+                    color: var(--text-color);
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    font-weight: 400;
+                    letter-spacing: 0.1px;
+                    margin-bottom: 1.5rem;
+                    text-align: left;
+                }
+
+                .tech-badges {
+                    .d-flex {
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                    }
+                }
+            }
+
+            .project-footer {
+                margin-top: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .project-links {
+                    justify-content: center;
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+
+    // Projects with images - row layout (existing styles)
     img {
         width: 100%;
         height: 100%;
@@ -21,7 +93,7 @@
     }
 
     .project-description {
-        color: #4b5563;
+        color: var(--text-color);
         font-size: 0.95rem;
         line-height: 1.6;
         font-weight: 400;
@@ -30,13 +102,13 @@
     }
 
     .tech-badge {
-        color: #6a11cb;
+        color: var(--accent-color);
         font-size: 0.8rem;
         font-weight: 500;
         letter-spacing: 0.1px;
         border-radius: 0.5rem;
         padding: 0.4rem 0.8rem;
-        background: rgba(106, 17, 203, 0.1);
+        background: rgba(var(--accent-color-rgb, 106, 17, 203), 0.1);
         transition: all 0.2s ease;
     }
 
@@ -57,5 +129,50 @@
         letter-spacing: 0.1px;
         box-shadow: 0 2px 6px rgba(41, 128, 185, 0.25);
         background: linear-gradient(145deg, #2980b9, #1c5980);
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .project-card {
+        &.no-image {
+            min-height: 350px;
+
+            .project-content-column {
+                padding: 1.5rem;
+                gap: 1.25rem;
+
+                .project-header {
+                    .project-title {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .project-body {
+                    .project-description {
+                        font-size: 0.9rem;
+                    }
+
+                    .tech-badge {
+                        font-size: 0.75rem;
+                        padding: 0.35rem 0.7rem;
+                    }
+                }
+
+                .project-footer {
+                    .project-links {
+                        flex-direction: column;
+                        gap: 0.75rem;
+                        align-items: center;
+
+                        .github-btn,
+                        .demo-btn {
+                            font-size: 0.85rem;
+                            min-width: 140px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

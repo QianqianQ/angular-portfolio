@@ -11,7 +11,7 @@
     bottom: 0;
     left: 20px; // Move the line to the left
     width: 2px;
-    background: #6a11cb;
+    background: var(--accent-color);
   }
 
   .timeline-item {
@@ -27,18 +27,18 @@
       left: 10px; // Move the circle to the left
       width: 20px;
       height: 20px;
-      background: #6a11cb;
+      background: var(--accent-color);
       border-radius: 50%;
       z-index: 1;
     }
   }
 
   .timeline-content {
-    background: #f9f9f9;
+    background: var(--container-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 
     .title-row {
         display: flex;
@@ -59,7 +59,7 @@
     }
 
     h4 {
-        color: #333;
+        color: var(--text-color);
         font-size: 1.1rem;
         font-weight: 500;
         margin: 0.75rem 0 0.5rem;
@@ -67,7 +67,7 @@
     }
 
     p {
-        color: #555;
+        color: var(--text-color);
         font-size: 0.95rem;
         line-height: 1.6;
         font-weight: 400;
@@ -90,7 +90,7 @@
     }
     
     .bullet {
-        color: #6a11cb;
+        color: var(--accent-color);
         font-size: 1.2rem;
         margin-right: 0.75rem;
         line-height: 1;
@@ -107,12 +107,12 @@
             align-items: center;
             gap: 0.3rem;
             padding: 0.3rem 0.8rem;
-            background-color: rgba(106, 17, 203, 0.1);
+            background-color: rgba(var(--accent-color-rgb, 106, 17, 203), 0.1);
             border-radius: 2rem;
             font-size: 0.8rem;
             font-weight: 500;
             letter-spacing: 0.05px;
-            color: #6a11cb;
+            color: var(--accent-color);
             transition: all 0.3s ease;
 
             i {
@@ -120,7 +120,7 @@
             }
 
             &:hover {
-                background-color: rgba(106, 17, 203, 0.2);
+                background-color: rgba(var(--accent-color-rgb, 106, 17, 203), 0.2);
                 transform: translateY(-2px);
             }
         }

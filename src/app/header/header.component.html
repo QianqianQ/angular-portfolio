@@ -1,15 +1,20 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
-      <!-- <a class="navbar-brand" [routerLink]="['/']">Logo</a> -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <a class="navbar-brand" [routerLink]="['/']">
+        <span class="brand-text">Portfolio</span>
+      </a> -->
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           @for (item of navItems; track item.label) {
             <li class="nav-item">
-              <a class="nav-link" 
+              <a class="nav-link"
                 (click)="scrollToSection(item.fragment)"
                 [class.active]="activeSection === item.fragment">
                 {{ item.label }}
@@ -17,15 +22,22 @@
             </li>
           }
         </ul>
-        @if (sociaMediaInfo && sociaMediaInfo.length > 0) {
-          <div class="social-links">
-            @for (item of sociaMediaInfo; track item.type) {
-              <a [attr.href]="item.link || null" [attr.target]="item.type !== 'email' ? '_blank' : null" rel="noopener noreferrer">
-                <i [class]="item.icon"></i>
-              </a>
-            }
-          </div>
-        }
+
+        <div class="navbar-actions">
+          @if (sociaMediaInfo && sociaMediaInfo.length > 0) {
+            <div class="social-links">
+              @for (item of sociaMediaInfo; track item.type) {
+                <a [attr.href]="item.link || null"
+                   [attr.target]="item.type !== 'email' ? '_blank' : null"
+                   rel="noopener noreferrer"
+                   class="social-link">
+                  <i [class]="item.icon"></i>
+                </a>
+              }
+            </div>
+          }
+          <app-theme-toggle></app-theme-toggle>
+        </div>
       </div>
     </div>
   </nav>

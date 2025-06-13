@@ -78,9 +78,10 @@ button {
   background-color: var(--background-color);
   color: var(--text-color);
   scroll-margin-top: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   .section-title {
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -95,7 +96,7 @@ button {
       bottom: -5px;
       width: 100%;
       height: 3px;
-      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
@@ -107,7 +108,7 @@ button {
   }
 
   .h3-title {
-    color: #6a11cb;
+    color: var(--accent-color);
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: -0.25px;
