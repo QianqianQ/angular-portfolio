@@ -45,3 +45,4 @@ public/data/*
 !public/data/data.sample.json
 .vercel
 .env*.local
+.env

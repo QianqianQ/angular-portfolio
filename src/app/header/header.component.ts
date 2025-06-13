@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
-// import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
+import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 // import * as data from '../../../public/data/data.json';
 // import { CONTACT_INFO } from '../../../public/data/contactInfo';
 import { ContactInfo } from '../models';
@@ -12,7 +12,7 @@ import { DataService } from '../services/data.service';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, ThemeToggleComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   animations: [

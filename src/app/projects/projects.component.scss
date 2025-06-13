@@ -1,13 +1,13 @@
 .project-card {
     border-radius: 20px;
-    border: 1px solid rgba(106, 17, 203, 0.1);
-    box-shadow: 0 4px 20px rgba(106, 17, 203, 0.15);
+    border: 1px solid rgba(var(--accent-color-rgb, 106, 17, 203), 0.1);
+    box-shadow: 0 4px 20px rgba(var(--accent-color-rgb, 106, 17, 203), 0.15);
     transition: all 0.3s ease;
     font-family: var(--text-font-family);
 
     &:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 20px rgba(106, 17, 203, 0.25);
+        box-shadow: 0 4px 20px rgba(var(--accent-color-rgb, 106, 17, 203), 0.25);
     }
 
     img {
@@ -21,7 +21,7 @@
     }
 
     .project-description {
-        color: #4b5563;
+        color: var(--text-color);
         font-size: 0.95rem;
         line-height: 1.6;
         font-weight: 400;
@@ -30,13 +30,13 @@
     }
 
     .tech-badge {
-        color: #6a11cb;
+        color: var(--accent-color);
         font-size: 0.8rem;
         font-weight: 500;
         letter-spacing: 0.1px;
         border-radius: 0.5rem;
         padding: 0.4rem 0.8rem;
-        background: rgba(106, 17, 203, 0.1);
+        background: rgba(var(--accent-color-rgb, 106, 17, 203), 0.1);
         transition: all 0.2s ease;
     }
 

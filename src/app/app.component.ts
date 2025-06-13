@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
+import { ThemeService } from './services/theme.service';
 
 
 @Component({
@@ -13,4 +14,9 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'Qianqian Qin';
+
+  constructor(private themeService: ThemeService) {
+    // Initialize theme on app startup
+    this.themeService.setTheme();
+  }
 }
