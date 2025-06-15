@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Certificate } from '../models';
+import { Certificate } from '../../../models';
 // import * as data from '../../../public/data/data.json';
 // import { CERTIFICATES } from '../data/certificates';
-import { DataService } from '../services/data.service';
+import { DataService } from '../../../services/data.service';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class CertificatesComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    const data = this.dataService.getPortfolioData();
+    const data = this.dataService.getPortfolioDataSafe();
     this.certificates = data.certificates;
   }
 }

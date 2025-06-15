@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
-import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
+import { ThemeToggleComponent } from '../../ui/theme-toggle/theme-toggle.component';
 // import * as data from '../../../public/data/data.json';
 // import { CONTACT_INFO } from '../../../public/data/contactInfo';
-import { ContactInfo } from '../models';
-import { DataService } from '../services/data.service';
+import { ContactInfo } from '../../../models';
+import { DataService } from '../../../services/data.service';
 
 
 @Component({
@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
     { label: 'Projects', route: '/', fragment: 'projects' },
     { label: 'Certificates', route: '/', fragment: 'certificates' },
   ];
-  
+
   sociaMediaInfo: ContactInfo[] = [];
 
   activeSection: string | null = null;
@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
     }
 
   ngOnInit() {
-    this.sociaMediaInfo = this.dataService.getPortfolioData().contactInfo;
+    this.sociaMediaInfo = this.dataService.getPortfolioDataSafe().contactInfo;
   }
 
   scrollToSection(fragment: string) {

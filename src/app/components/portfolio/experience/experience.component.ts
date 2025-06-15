@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
-import { Experience } from '../models';
+import { Experience } from '../../../models';
 // import * as data from '../../../public/data/data.json';
 // import { EXPERIENCE } from '../data/experience';
-import { DataService } from '../services/data.service';
+import { DataService } from '../../../services/data.service';
 
 
 @Component({
@@ -32,7 +32,7 @@ export class ExperienceComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    const data = this.dataService.getPortfolioData();
+    const data = this.dataService.getPortfolioDataSafe();
     this.experiences = data.experience;
   }
 }

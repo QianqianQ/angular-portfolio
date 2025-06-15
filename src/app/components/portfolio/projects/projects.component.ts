@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DataService } from '../services/data.service';
-import { Project } from '../models/project.model';
+import { DataService } from '../../../services/data.service';
+import { Project } from '../../../models/project.model';
 
 @Component({
   selector: 'app-projects',
@@ -17,7 +17,7 @@ export class ProjectsComponent {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    const data = this.dataService.getPortfolioData();
+    const data = this.dataService.getPortfolioDataSafe();
     this.projects = data.projects;
   }
 }

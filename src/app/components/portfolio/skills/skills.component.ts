@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
-import { Education } from '../models';
+import { Skill } from '../../../models';
 // import * as data from '../../../public/data/data.json';
-// import { EDUCATION } from '../data/education';
-import { DataService } from '../services/data.service';
-
+// import { SKILLS } from '../data/skills';
+import { DataService } from '../../../services/data.service';
 
 @Component({
-  selector: 'app-education',
+  selector: 'app-skills',
   imports: [],
-  templateUrl: './education.component.html',
-  styleUrl: './education.component.scss',
+  templateUrl: './skills.component.html',
+  styleUrl: './skills.component.scss',
   animations: [
-    trigger('fadeInUp', [
+    trigger('fadeInStagger', [
       transition(':enter', [
-        query('.timeline-item', [
+        query('.skill-item', [
           style({ opacity: 0, transform: 'translateY(20px)' }),
           stagger(100, [
             animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
@@ -25,13 +24,13 @@ import { DataService } from '../services/data.service';
     ])
   ]
 })
-export class EducationComponent implements OnInit {
-  education: Education[] = [];
+export class SkillsComponent implements OnInit {
+  skills: Skill[] = [];
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    const data = this.dataService.getPortfolioData();
-    this.education = data.education;
+    const data = this.dataService.getPortfolioDataSafe();
+    this.skills = data.skills;
   }
 }

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ContactInfo } from '../models';
+import { ContactInfo } from '../../../models';
 // import * as data from '../../../public/data/data.json';
 // import { CONTACT_INFO } from '../data/contactInfo';
-import { DataService } from '../services/data.service';
+import { DataService } from '../../../services/data.service';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class ContactComponent {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    const data = this.dataService.getPortfolioData();
+    const data = this.dataService.getPortfolioDataSafe();
     this.contactInfo = data.contactInfo;
   }
 }
