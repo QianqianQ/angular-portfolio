@@ -27,7 +27,6 @@ A modern, responsive personal portfolio application built with Angular 19, featu
 - **Vercel** - Cloud platform for deployment
 - **GitHub Actions** - CI/CD automation
 - **Font Awesome & Devicons** - Icon libraries
-- **Jasmine & Karma** - Testing framework
 
 ## 📁 Project Structure
 
@@ -35,25 +34,56 @@ A modern, responsive personal portfolio application built with Angular 19, featu
 angular-portfolio/
 ├── src/
 │   ├── app/
-│   │   ├── about/              # About section component
-│   │   ├── certificates/       # Certificates display
-│   │   ├── contact/            # Contact information
-│   │   ├── education/          # Education timeline
-│   │   ├── experience/         # Work experience
-│   │   ├── header/             # Navigation header
-│   │   ├── home/               # Main landing page
+│   │   ├── components/         # Organized component structure
+│   │   │   ├── layout/         # Layout components
+│   │   │   │   ├── header/     # Navigation header
+│   │   │   │   └── home/       # Main landing page
+│   │   │   ├── portfolio/      # Portfolio-specific components
+│   │   │   │   ├── about/      # About section
+│   │   │   │   ├── certificates/ # Certificates display
+│   │   │   │   ├── contact/    # Contact information
+│   │   │   │   ├── education/  # Education timeline
+│   │   │   │   ├── experience/ # Work experience
+│   │   │   │   ├── projects/   # Projects showcase
+│   │   │   │   └── skills/     # Skills grid
+│   │   │   └── ui/             # Reusable UI components
+│   │   │       ├── loading-spinner/ # Loading component
+│   │   │       └── theme-toggle/     # Theme switcher
 │   │   ├── models/             # TypeScript interfaces
-│   │   ├── projects/           # Projects showcase
+│   │   │   ├── certificate.model.ts
+│   │   │   ├── contactInfo.model.ts
+│   │   │   ├── education.model.ts
+│   │   │   ├── experience.model.ts
+│   │   │   ├── project.model.ts
+│   │   │   ├── skill.model.ts
+│   │   │   └── index.ts        # Model exports
 │   │   ├── services/           # Angular services
-│   │   ├── skills/             # Skills grid
-│   │   └── theme-toggle/       # Theme switcher
+│   │   │   ├── data.service.ts # Portfolio data management
+│   │   │   ├── error-handler.service.ts # Error handling
+│   │   │   ├── seo.service.ts  # SEO optimization
+│   │   │   └── theme.service.ts # Theme management
+│   │   ├── app.component.*     # Root component
+│   │   ├── app.config.ts       # App configuration
+│   │   ├── app.module.ts       # App module
+│   │   └── app.routes.ts       # Routing configuration
 │   ├── environments/           # Environment configurations
 │   └── styles/                 # Global styles and themes
 ├── public/
-│   └── data/                   # Portfolio data files
+│   ├── data/                   # Portfolio data files
+│   │   ├── data.json          # Main portfolio data
+│   │   ├── data.sample.json   # Sample data template
+│   │   └── *.ts               # TypeScript data files
+│   └── favicon.ico            # Site favicon
 ├── api/                        # Vercel serverless functions
+│   └── fetch-portfolio.js     # Portfolio data API
 ├── script/                     # Deployment utilities
-└── .github/workflows/          # CI/CD pipelines
+│   └── uploadFile.js          # Vercel blob upload
+├── .github/workflows/          # CI/CD pipelines
+│   └── preview.yml            # Preview deployment
+├── .vscode/                    # VS Code settings
+├── angular.json               # Angular CLI configuration
+├── package.json               # Dependencies and scripts
+└── tsconfig.json              # TypeScript configuration
 ```
 
 ## 🏗️ Architecture
@@ -225,38 +255,6 @@ Modify theme variables in `src/styles/`:
 - **Lighthouse Integration**: Performance auditing
 - **Core Web Vitals**: Monitoring key performance metrics
 
-## 🏗️ Architecture Improvements
-
-### Recommended Structure
-Instead of moving components to a separate repository, organize within the same repo:
-
-```
-src/app/
-├── components/
-│   ├── ui/                    # Reusable UI components
-│   │   ├── loading-spinner/
-│   │   └── theme-toggle/
-│   ├── portfolio/             # Portfolio-specific components
-│   │   ├── about/
-│   │   ├── experience/
-│   │   └── skills/
-│   └── layout/                # Layout components
-│       └── header/
-├── shared/                    # Shared utilities
-│   ├── models/
-│   ├── services/
-│   └── testing/
-└── core/                      # Core application logic
-    ├── guards/
-    └── interceptors/
-```
-
-### Why Not Separate Component Repository?
-- **Tight Coupling**: Components depend on specific data models and services
-- **Limited Reusability**: Portfolio components are highly specialized
-- **Maintenance Overhead**: Complex versioning and deployment
-- **Small Scale**: Single-purpose application doesn't justify separation
-
 ## 🔧 Development
 
 ### Code Standards
@@ -265,35 +263,11 @@ src/app/
 - **Prettier Integration**: Consistent code formatting
 - **Angular Style Guide**: Following official conventions
 
-## 🚀 Additional Improvements Implemented
-
-### 1. Enhanced Error Handling
-- **Centralized Error Service**: Global error management with user-friendly messages
-- **Retry Logic**: Automatic retry for failed API requests
-- **Fallback Data**: Graceful degradation when data loading fails
-- **Loading States**: Visual feedback during data fetching
-
-### 2. SEO Optimization
-- **Meta Tags Management**: Dynamic title, description, and social media tags
-- **Structured Data**: Schema.org markup for better search visibility
-- **Canonical URLs**: Proper URL canonicalization
-- **Open Graph**: Enhanced social media sharing
-
-### 3. Testing Infrastructure
-- **Test Utilities**: Reusable testing helpers and mock data
-- **Component Testing**: Improved test setup and assertions
-- **Service Testing**: Mock services and data providers
-- **Integration Testing**: End-to-end user workflows
-
-### 4. Performance Enhancements
-- **Data Caching**: Service-level caching with shareReplay
-- **Loading Spinner**: Reusable loading component
-- **Error Boundaries**: Graceful error handling
-- **Type Safety**: Comprehensive TypeScript interfaces
-
-### 5. Code Organization
-- **Shared Services**: Centralized business logic
-- **Utility Components**: Reusable UI elements
-- **Testing Helpers**: Standardized test utilities
-- **Type Definitions**: Strong typing throughout
+### 6. Updated File Structure
+All components moved to organized structure:
+- `src/app/components/ui/` - Reusable UI components
+- `src/app/components/portfolio/` - Portfolio-specific sections
+- `src/app/components/layout/` - Layout and navigation
+- `src/app/services/` - Business logic services
+- `src/app/models/` - TypeScript interfaces
 
