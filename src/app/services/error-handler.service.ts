@@ -88,6 +88,27 @@ export class ErrorHandlerService {
   }
 
   private generateId(): string {
-    return Math.random().toString(36).substr(2, 9);
+    return this.generateSecureRandomString();
+  }
+
+  /**
+   * Generates a cryptographically secure random string (if possible) or falls back to Math.random().
+   * @param length - Desired length of the random string (default: 16).
+   * @returns A random string.
+   */
+  private generateSecureRandomString(length: number = 16): string {
+    let randomValues: Uint32Array;
+
+    // Try using window.crypto.getRandomValues (secure)
+    if (window.crypto && window.crypto.getRandomValues) {
+      randomValues = new Uint32Array(1);
+      window.crypto.getRandomValues(randomValues);
+      return randomValues[0].toString(36).substring(0, length);
+    }
+    // Fallback to Math.random() (less secure, but works)
+    else {
+      console.warn('Cryptographically secure random number generator not available. Falling back to Math.random().');
+      return Math.random().toString(36).substring(2, 2 + length);
+    }
   }
 }
